@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+  <mapper namespace="com.etc.dao.IRiderMapper">	
+		
+
+	
+	<resultMap type="com.etc.entity.Rider" id="riderResultMap">
+		<id property="riderid" column="riderid "/>
+		<result property="ridername" column="ridername"/>
+		<result property="ridephonenum" column="ridephonenum"/>
+		<result property="ridesex" column="ridesex"/>
+		
+	</resultMap>
+	
+	<select id="findAllRider" resultMap="riderResultMap">
+		select * from rider
+	</select>
+	
+	<select id="findRiderById" resultMap="riderResultMap">
+		select * from rider where rider = #{rider}
+	</select>
+	
+	<insert id="addRider" parameterType="com.etc.entity.Rider">
+		insert into rider 
+		values(null,#{ridername},#{riderphonenum},#{ridersex})
+	</insert>
+	
+	<delete id="deleteRiderById" parameterType="com.etc.entity.Rider">
+		delete from rider where riderid = #{riderid}
+	</delete>
+	
+
+  
+  </mapper>

@@ -23,20 +23,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   </head>
   
   <body>
-    This is my JSP page. <br>
-    <form action="register/getPwData" method="get">
-	    <input type="text" name="account">
-	    <br>
-	    <input type="text" name="password">
-	    <br>
-	    <input type="text" name="userphonenum">
-	    <br>
-	    <input type="text" name="username">
-	    <br>
-	    <input type="text" name="usersex">
-	    <br>
-	    <input type="submit" value="提交">
-    </form>
-    <br>
+
+	
   </body>
 </html>

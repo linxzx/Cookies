@@ -1,17 +1,14 @@
-package com.etc.dao;
+package com.etc.service;
 
 import java.util.List;
 
-import org.springframework.stereotype.Repository;
-
 import com.etc.entity.Address;
 import com.etc.entity.Rider;
+import com.etc.entity.Shop;
 import com.etc.entity.User;
 
-@Repository("riderMapper")
-public interface IRiderMapper {
-	
-	
+public interface IRiderService {
+		
 	//查询所有骑手
 	public List<Rider> findAllRider();
 	
@@ -24,7 +21,4 @@ public interface IRiderMapper {
 	//删除骑手
 	public int deleteRiderById(Rider rider);
 	
-
-	
-
 }

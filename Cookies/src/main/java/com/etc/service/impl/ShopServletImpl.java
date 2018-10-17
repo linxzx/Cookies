@@ -4,11 +4,13 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Service;
 
 import com.etc.dao.IShopMapper;
 import com.etc.entity.Shop;
 import com.etc.service.IShopService;
 
+@Service("shopService")
 public class ShopServletImpl implements IShopService {
 	
 	@Autowired

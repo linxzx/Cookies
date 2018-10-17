@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Service;
 
 import com.etc.dao.IAddressMapper;
 import com.etc.dao.IShopMapper;
@@ -12,11 +13,11 @@ import com.etc.entity.Shop;
 import com.etc.entity.User;
 import com.etc.service.IAddressService;
 
-
+@Service("addressService")
 public class AddressServletImpl implements IAddressService {
 
 	@Autowired
-	@Qualifier("addressMapper")
+	@Qualifier("adressMapper")
 	private IAddressMapper adressMapper;
 	
 	@Override
