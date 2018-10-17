@@ -31,7 +31,7 @@
 		<result property="username" column="username"/>
 		<result property="viptime" column="viptime"/>
 			
-		<association property="address" javaType="com.etc.entity.Address" >
+		<association property="addresslist" javaType="com.etc.entity.Address" >
 					
 			<id property="addid" column="addid"/>
 			<result property="userid" column="userid"/>

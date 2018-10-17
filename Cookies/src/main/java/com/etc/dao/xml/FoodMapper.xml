@@ -23,7 +23,7 @@
 		<result property="score" column="score"/>
 		<result property="monthsalas" column="monthsalas"/>
 		
-		<association property="food" javaType="com.etc.entity.Food">
+		<association property="foodlist" javaType="com.etc.entity.Food">
 			<id property="foodid" column="foodid"/>
 			<id property="shopid" column="shopid"/>
 			<result property="foodprice" column="foodprice"/>
