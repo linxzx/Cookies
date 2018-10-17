@@ -4,6 +4,7 @@ import java.util.List;
 
 public class Food {
 	private int foodid;
+	private String Foodname;
 	private int shopid;
 	private double foodprice;
 	private boolean onsale;
@@ -12,9 +13,18 @@ public class Food {
 	
 	private List<Shopping> shopping;
 	private Ordertofood ordertofood;
+	private Shop shop;
 	
 	
 	
+	public Shop getShop() {
+		return shop;
+	}
+
+	public void setShop(Shop shop) {
+		this.shop = shop;
+	}
+
 	public List<Shopping> getShopping() {
 		return shopping;
 	}
@@ -41,6 +51,15 @@ public class Food {
 	public void setFoodid(int foodid) {
 		this.foodid = foodid;
 	}
+	
+	public String getFoodname() {
+		return Foodname;
+	}
+
+	public void setFoodname(String foodname) {
+		Foodname = foodname;
+	}
+
 	public int getShopid() {
 		return shopid;
 	}
@@ -72,10 +91,11 @@ public class Food {
 		this.foodcontent = foodcontent;
 	}
 	
-	public Food(int foodid, int shopid, double foodprice, boolean onsale,
+	public Food(int foodid,String foodname, int shopid, double foodprice, boolean onsale,
 			String fimgpath, String foodcontent) {
 		super();
 		this.foodid = foodid;
+		this.Foodname = foodname;
 		this.shopid = shopid;
 		this.foodprice = foodprice;
 		this.onsale = onsale;
@@ -85,12 +105,12 @@ public class Food {
 
 	@Override
 	public String toString() {
-		return "Food [foodid=" + foodid + ", shopid=" + shopid + ", foodprice="
-				+ foodprice + ", onsale=" + onsale + ", fimgpath=" + fimgpath
+		return "Food [foodid=" + foodid + ", Foodname=" + Foodname
+				+ ", shopid=" + shopid + ", foodprice=" + foodprice
+				+ ", onsale=" + onsale + ", fimgpath=" + fimgpath
 				+ ", foodcontent=" + foodcontent + ", shopping=" + shopping
-				+ ", ordertofood=" + ordertofood + "]";
+				+ ", ordertofood=" + ordertofood + ", shop=" + shop + "]";
 	}
-	
-	
+
 
 }

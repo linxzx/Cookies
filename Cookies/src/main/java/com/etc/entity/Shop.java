@@ -16,9 +16,18 @@ public class Shop {
 	private List<Shopping> shopping;
 	private List<Discount> discount;
 	private List<Comment> comment;
+	private List<Food> food;
 	
 	
 	
+	public List<Food> getFood() {
+		return food;
+	}
+
+	public void setFood(List<Food> food) {
+		this.food = food;
+	}
+
 	public List<Collect> getCollect() {
 		return collect;
 	}
@@ -110,7 +119,7 @@ public class Shop {
 		this.sendmoney = sendmoney;
 		this.monthsales = monthsales;
 	}
-	
+
 	@Override
 	public String toString() {
 		return "Shop [shopid=" + shopid + ", shopname=" + shopname
@@ -118,8 +127,10 @@ public class Shop {
 				+ ", monthsales=" + monthsales + ", collect=" + collect
 				+ ", order=" + order + ", shopredpacket=" + shopredpacket
 				+ ", shopping=" + shopping + ", discount=" + discount
-				+ ", comment=" + comment + "]";
+				+ ", comment=" + comment + ", food=" + food + "]";
 	}
+	
+
 	
 	
 }
