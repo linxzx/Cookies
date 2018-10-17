@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+  <mapper namespace="com.etc.dao.IShoprMapper">
+  
+  <resultMap type="com.etc.entity.Shop" id="shopResultMap">
+		<id property="shopid" column="shopid"/>
+		<result property="shopname" column="shopname"/>
+		<result property="shopadd" column="shopadd"/>
+		<result property="sendmoney" column="sendmoney"/>
+		<result property="score" column="score"/>
+		<result property="monthsalas" column="monthsalas"/>
+	</resultMap>
+	
+	<select id="findAllShop" resultMap="shopResultMap">
+		select * from shop
+	</select>
+	
+	<select id="findShopByName" resultMap="shopResultMap">
+		select * from shop where shopname = #{shopname}
+	</select>
+	
+	<insert id="addUser" parameterType="com.etc.entity.Shop">
+		insert into shop 
+		values(null,#{shopname},#{shopadd},null,null,null)
+	</insert>
+	
+	<delete id="deleteShopById" parameterType="com.etc.entity.shop">
+		delete from shop where shopid = #{shopid}
+	</delete>
+	
+	<update id="updateShopById">
+ 		update shop set shopname = #{shopname} where shopid = #{shopid}
+ 	</update>
+  
+  </mapper>
