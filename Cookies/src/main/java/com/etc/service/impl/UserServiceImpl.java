@@ -1,6 +1,7 @@
 package com.etc.service.impl;
 
 
+import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
@@ -17,15 +18,18 @@ public class UserServiceImpl implements IUserService {
 	private IUserMapper userMapper;
 	
 	@Override
-	public User findUser(String account) {
+	public User findUser(String account,String password) {
+		if(password == ""||password == null){
+			password = "0";
+		}
 		
-		return userMapper.findUser(account);
+		return userMapper.findUser(account,password);
 	}
 
 	@Override
-	public void addUser(User user) {
+	public int addUser(User user) {
 		
-		userMapper.addUser(user);
+		return userMapper.addUser(user);
 	}
 
 }

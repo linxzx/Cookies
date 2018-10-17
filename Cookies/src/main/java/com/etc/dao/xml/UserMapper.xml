@@ -22,6 +22,9 @@
 	<select id="findUser" resultMap="userResultMap">
 		select * from user 
 		where account = #{account}
+		<if test="password !=null and password !=''">
+			and password = #{password}
+		</if>
 	</select>
 	
 	<insert id="addUser" parameterType="com.etc.entity.User">

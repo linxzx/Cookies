@@ -4,7 +4,7 @@ import com.etc.entity.User;
 
 public interface IUserService {
 	
-	public User findUser(String account);
+	public User findUser(String account,String password);
 	
-	public void addUser(User user);
+	public int addUser(User user);
 }
