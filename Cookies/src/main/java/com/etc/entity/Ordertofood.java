@@ -6,20 +6,20 @@ public class Ordertofood {
 	private int orderid;
 	private int foodid;
 	
-	private List<Food> food;
+	private List<Food> foodlist;
 	
 	private Order order;
 	
 	
-	
-	
-	public List<Food> getFood() {
-		return food;
+
+
+	public List<Food> getFoodlist() {
+		return foodlist;
 	}
 
 
-	public void setFood(List<Food> food) {
-		this.food = food;
+	public void setFoodlist(List<Food> foodlist) {
+		this.foodlist = foodlist;
 	}
 
 
@@ -59,7 +59,7 @@ public class Ordertofood {
 	@Override
 	public String toString() {
 		return "Ordertofood [orderid=" + orderid + ", foodid=" + foodid
-				+ ", food=" + food + ", order=" + order + "]";
+				+ ", food=" + foodlist + ", order=" + order + "]";
 	}
 
 	

@@ -50,7 +50,7 @@
 		values(null,#{foddname},#{shopid},#{foodprice},#{onsale},#{fimgpath},#{foodcontent})
 	</insert>
 	
-	<delete id="deleteFoodByFoodId" parameterType="com.etc.entity.food">
+	<delete id="deleteFoodByFoodId" parameterType="com.etc.entity.Food">
 		delete from food where foodid = #{foodid}
 	</delete>
 	

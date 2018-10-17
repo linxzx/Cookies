@@ -18,12 +18,12 @@ import com.etc.service.IUserService;
 public class TestController {
 	
 	@Autowired
-	@Qualifier("userService")
+	@Qualifier("addressService")
 	private IAddressService addressServlet;
 	                                                                                
 	
 	@RequestMapping(value="testFindAllAddress")
-	public ModelAndView findUser(String name){
+	public ModelAndView findUser(){
 		
 		
 		User user = new User();

@@ -11,7 +11,7 @@ public class Food {
 	private String fimgpath;
 	private String foodcontent;
 	
-	private List<Shopping> shopping;
+	private List<Shopping> shoppinglist;
 	private Ordertofood ordertofood;
 	private Shop shop;
 	
@@ -26,11 +26,11 @@ public class Food {
 	}
 
 	public List<Shopping> getShopping() {
-		return shopping;
+		return shoppinglist;
 	}
 
 	public void setShopping(List<Shopping> shopping) {
-		this.shopping = shopping;
+		this.shoppinglist = shopping;
 	}
 
 	public Ordertofood getOrdertofood() {
@@ -108,7 +108,7 @@ public class Food {
 		return "Food [foodid=" + foodid + ", Foodname=" + Foodname
 				+ ", shopid=" + shopid + ", foodprice=" + foodprice
 				+ ", onsale=" + onsale + ", fimgpath=" + fimgpath
-				+ ", foodcontent=" + foodcontent + ", shopping=" + shopping
+				+ ", foodcontent=" + foodcontent + ", shopping=" + shoppinglist
 				+ ", ordertofood=" + ordertofood + ", shop=" + shop + "]";
 	}
 

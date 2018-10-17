@@ -10,70 +10,70 @@ public class Shop {
 	private double sendmoney;
 	private int monthsales;
 	
-	private List<Collect> collect;
-	private List<Order> order;
-	private List<Shopredpacket> shopredpacket;
-	private List<Shopping> shopping;
-	private List<Discount> discount;
-	private List<Comment> comment;
-	private List<Food> food;
+	private List<Collect> collectlist;
+	private List<Order> orderlist;
+	private List<Shopredpacket> shopredpacketlist;
+	private List<Shopping> shoppinglist;
+	private List<Discount> discountlist;
+	private List<Comment> commentlist;
+	private List<Food> foodlist;
 	
 	
 	
 	public List<Food> getFood() {
-		return food;
+		return foodlist;
 	}
 
 	public void setFood(List<Food> food) {
-		this.food = food;
+		this.foodlist = food;
 	}
 
 	public List<Collect> getCollect() {
-		return collect;
+		return collectlist;
 	}
 
 	public void setCollect(List<Collect> collect) {
-		this.collect = collect;
+		this.collectlist = collect;
 	}
 
 	public List<Order> getOrder() {
-		return order;
+		return orderlist;
 	}
 
 	public void setOrder(List<Order> order) {
-		this.order = order;
+		this.orderlist = order;
 	}
 
 	public List<Shopredpacket> getShopredpacket() {
-		return shopredpacket;
+		return shopredpacketlist;
 	}
 
 	public void setShopredpacket(List<Shopredpacket> shopredpacket) {
-		this.shopredpacket = shopredpacket;
+		this.shopredpacketlist = shopredpacket;
 	}
 
 	public List<Shopping> getShopping() {
-		return shopping;
+		return shoppinglist;
 	}
 
 	public void setShopping(List<Shopping> shopping) {
-		this.shopping = shopping;
+		this.shoppinglist = shopping;
 	}
 
 	public List<Discount> getDiscount() {
-		return discount;
+		return discountlist;
 	}
 
 	public void setDiscount(List<Discount> discount) {
-		this.discount = discount;
+		this.discountlist = discount;
 	}
 
 	public List<Comment> getComment() {
-		return comment;
+		return commentlist;
 	}
 
 	public void setComment(List<Comment> comment) {
-		this.comment = comment;
+		this.commentlist = comment;
 	}
 
 	public Shop() {
@@ -124,10 +124,10 @@ public class Shop {
 	public String toString() {
 		return "Shop [shopid=" + shopid + ", shopname=" + shopname
 				+ ", shopadd=" + shopadd + ", sendmoney=" + sendmoney
-				+ ", monthsales=" + monthsales + ", collect=" + collect
-				+ ", order=" + order + ", shopredpacket=" + shopredpacket
-				+ ", shopping=" + shopping + ", discount=" + discount
-				+ ", comment=" + comment + ", food=" + food + "]";
+				+ ", monthsales=" + monthsales + ", collect=" + collectlist
+				+ ", order=" + orderlist + ", shopredpacket=" + shopredpacketlist
+				+ ", shopping=" + shoppinglist + ", discount=" + discountlist
+				+ ", comment=" + commentlist + ", food=" + foodlist + "]";
 	}
 	
 

@@ -15,7 +15,7 @@ public class Shopredpacket {
 	private Date rendtime;
 	
 	private Shop shop;
-	private List<Userredpacket> userredpacket;
+	private List<Userredpacket> userredpacketlist;
 	
 	
 	
@@ -26,10 +26,10 @@ public class Shopredpacket {
 		this.shop = shop;
 	}
 	public List<Userredpacket> getUserredpacket() {
-		return userredpacket;
+		return userredpacketlist;
 	}
 	public void setUserredpacket(List<Userredpacket> userredpacket) {
-		this.userredpacket = userredpacket;
+		this.userredpacketlist = userredpacket;
 	}
 	public Shopredpacket() {
 		// TODO Auto-generated constructor stub
@@ -102,7 +102,7 @@ public class Shopredpacket {
 				+ ", discount=" + discount + ", fulldisc=" + fulldisc
 				+ ", redcontent=" + redcontent + ", shopid=" + shopid
 				+ ", rbegintime=" + rbegintime + ", rendtime=" + rendtime
-				+ ", shop=" + shop + ", userredpacket=" + userredpacket + "]";
+				+ ", shop=" + shop + ", userredpacket=" + userredpacketlist + "]";
 	}
 	
 	

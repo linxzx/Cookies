@@ -3,7 +3,7 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
   
-  <mapper namespace="com.etc.dao.IShoprMapper">
+  <mapper namespace="com.etc.dao.IShopMapper">
   
   <resultMap type="com.etc.entity.Shop" id="shopResultMap">
 		<id property="shopid" column="shopid"/>
@@ -27,7 +27,7 @@
 		values(null,#{shopname},#{shopadd},null,null,null)
 	</insert>
 	
-	<delete id="deleteShopById" parameterType="com.etc.entity.shop">
+	<delete id="deleteShopById" parameterType="com.etc.entity.Shop">
 		delete from shop where shopid = #{shopid}
 	</delete>
 	

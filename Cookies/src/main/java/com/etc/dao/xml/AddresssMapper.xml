@@ -3,7 +3,7 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
   
-  <mapper namespace="com.etc.dao.IShoprMapper">	
+  <mapper namespace="com.etc.dao.IAddressMapper">	
 		
 	<resultMap type="com.etc.entity.Address" id="addressResultMap">
 		<id property="addid" column="addid"/>
@@ -50,16 +50,16 @@
 		select * from address
 	</select>
 	
-	<select id="findAddressByUserName" resultMap="shopResultMap">
-		select * from user u,address a where u.userid=a.userid AND u.userid = #{Username};
+	<select id="findAddressByUserName" resultMap="userResultMap">
+		select * from user u,address a where u.userid=a.userid AND u.username = "lin";
 	</select>
 	
-	<insert id="addAddress" parameterType="com.etc.entity.Shop">
+	<insert id="addAddress" parameterType="com.etc.entity.Address">
 		insert into user 
 		values(null,#{userid},#{addname},#{addphonenum},#{addsex},#{address},#{addnum},#{isdefault})
 	</insert>
 	
-	<delete id="deleteAddressById" parameterType="com.etc.entity.shop">
+	<delete id="deleteAddressById" parameterType="com.etc.entity.Address">
 		delete from address where addid = #{addid}
 	</delete>
 	

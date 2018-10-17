@@ -17,11 +17,11 @@ public class User {
 	private String username;
 	private Date viptime;
 	
-	private List<Address> address;
-	private List<Userredpacket> userredpacket;
-	private List<Shopping> shopping;
-	private List<Order> order;
-	private List<Collect> collect;
+	private List<Address> addresslist;
+	private List<Userredpacket> userredpacketlist;
+	private List<Shopping> shoppinglist;
+	private List<Order> orderlist;
+	private List<Collect> collectlist;
 	
 	
 	public User() {
@@ -59,6 +59,67 @@ public class User {
 		this.username = username;
 		this.viptime = viptime;
 		this.usersex = usersex;
+	}
+
+
+	
+
+	public List<Address> getAddresslist() {
+		return addresslist;
+	}
+
+
+
+	public void setAddresslist(List<Address> addresslist) {
+		this.addresslist = addresslist;
+	}
+
+
+
+	public List<Userredpacket> getUserredpacketlist() {
+		return userredpacketlist;
+	}
+
+
+
+	public void setUserredpacketlist(List<Userredpacket> userredpacketlist) {
+		this.userredpacketlist = userredpacketlist;
+	}
+
+
+
+	public List<Shopping> getShoppinglist() {
+		return shoppinglist;
+	}
+
+
+
+	public void setShoppinglist(List<Shopping> shoppinglist) {
+		this.shoppinglist = shoppinglist;
+	}
+
+
+
+	public List<Order> getOrderlist() {
+		return orderlist;
+	}
+
+
+
+	public void setOrderlist(List<Order> orderlist) {
+		this.orderlist = orderlist;
+	}
+
+
+
+	public List<Collect> getCollectlist() {
+		return collectlist;
+	}
+
+
+
+	public void setCollectlist(List<Collect> collectlist) {
+		this.collectlist = collectlist;
 	}
 
 
@@ -137,8 +198,8 @@ public class User {
 				+ ", wechataccount=" + wechataccount + ", userphonenum="
 				+ userphonenum + ", isvip=" + isvip + ", money=" + money
 				+ ", username=" + username + ", viptime=" + viptime
-				+ ", usersex=" + usersex + ", address=" + address
-				+ ", userredpacket=" + userredpacket + ", shopping=" + shopping
-				+ ", order=" + order + ", collect=" + collect + "]";
+				+ ", usersex=" + usersex + ", address=" + addresslist
+				+ ", userredpacket=" + userredpacketlist + ", shopping=" + shoppinglist
+				+ ", order=" + orderlist + ", collect=" + collectlist + "]";
 	}
 }

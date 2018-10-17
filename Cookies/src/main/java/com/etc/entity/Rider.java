@@ -8,17 +8,17 @@ public class Rider {
 	private String ridephonenum;
 	private String ridesex;
 	
-	private List<Order> order;
+	private List<Order> orderlist;
 	
 	
 	
 	
 	public List<Order> getOrder() {
-		return order;
+		return orderlist;
 	}
 
 	public void setOrder(List<Order> order) {
-		this.order = order;
+		this.orderlist = order;
 	}
 
 	public Rider() {
@@ -62,7 +62,7 @@ public class Rider {
 	public String toString() {
 		return "Rider [riderid=" + riderid + ", ridername=" + ridername
 				+ ", ridephonenum=" + ridephonenum + ", ridesex=" + ridesex
-				+ ", order=" + order + "]";
+				+ ", order=" + orderlist + "]";
 	}
 
 	

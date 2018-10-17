@@ -17,31 +17,31 @@ import com.etc.service.IAddressService;
 public class AddressServletImpl implements IAddressService {
 
 	@Autowired
-	@Qualifier("adressMapper")
-	private IAddressMapper adressMapper;
+	@Qualifier("addressMapper")
+	private IAddressMapper addressMapper;
 	
 	@Override
 	public List<Address> findAllAddress() {
 		// TODO Auto-generated method stub
-		return adressMapper.findAllAddress();
+		return addressMapper.findAllAddress();
 	}
 
 	@Override
 	public Address findAddressByUserName(User user) {
 		// TODO Auto-generated method stub
-		return adressMapper.findAddressByUserName(user);
+		return addressMapper.findAddressByUserName(user);
 	}
 
 	@Override
 	public int addAddress(Address address) {
 		// TODO Auto-generated method stub
-		return adressMapper.addAddress(address);
+		return addressMapper.addAddress(address);
 	}
 
 	@Override
 	public int deleteAddressById(Address address) {
 		// TODO Auto-generated method stub
-		return adressMapper.deleteAddressById(address);
+		return addressMapper.deleteAddressById(address);
 	}
 	
 

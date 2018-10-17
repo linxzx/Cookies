@@ -22,7 +22,7 @@ public class Order {
 	private Shop shop;
 	private Rider rider;
 	
-	private List<Ordertofood> oredertofood;
+	private List<Ordertofood> oredertofoodlist;
 	
 	
 	
@@ -51,10 +51,10 @@ public class Order {
 		this.rider = rider;
 	}
 	public List<Ordertofood> getOredertofood() {
-		return oredertofood;
+		return oredertofoodlist;
 	}
 	public void setOredertofood(List<Ordertofood> oredertofood) {
-		this.oredertofood = oredertofood;
+		this.oredertofoodlist = oredertofood;
 	}
 	public Order() {
 		// TODO Auto-generated constructor stub
@@ -142,7 +142,7 @@ public class Order {
 				+ ", reachcost=" + reachcost + ", uredid=" + uredid
 				+ ", sdiscid=" + sdiscid + ", user=" + user
 				+ ", userredpacket=" + userredpacket + ", shop=" + shop
-				+ ", rider=" + rider + ", oredertofood=" + oredertofood + "]";
+				+ ", rider=" + rider + ", oredertofood=" + oredertofoodlist + "]";
 	}
 	
 	
