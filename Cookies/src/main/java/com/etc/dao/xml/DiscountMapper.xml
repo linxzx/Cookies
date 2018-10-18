@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+  <mapper namespace="com.etc.dao.IUserRedPacketMapper">	
+		
+	<resultMap type="com.etc.entity.Discount" id="discontAllResultMap">
+		
+		<id property="sdiscid" column="sdiscid"/>
+		<result property="discount" column="discount"/>
+		<result property="fulldisc" column="fulldisc"/>
+		<result property="discontent" column="discontent"/>
+		
+		<association property="shop" javaType="com.etc.entity.Shop">
+			<id property="shopid" column="shopid"/>
+			<result property="shopname" column="shopname"/>
+			<result property="shopadd" column="shopadd"/>
+			<result property="sendmoney" column="sendmoney"/>
+			<result property="score" column="score"/>
+			<result property="monthsalas" column="monthsalas"/>			
+		</association>
+		
+		<collection property="orderlist" ofType="com.etc.entity.Order" >			
+			<id property="orderid" column="orderid"/>
+			<result property="ordertime" column="ordertime"/>
+			<result property="reachtime" column="reachtime"/>
+			<result property="bocost" column="bocost"/>
+			<result property="reachcost" column="reachcost"/>
+		</collection>
+
+	</resultMap>
+
+
+	
+	
+  </mapper>

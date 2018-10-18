@@ -9,6 +9,43 @@
 		<result property="foodnum" column="foodnum"/>	
 	</resultMap>
 	
+	<resultMap type="com.etc.entity.Shopping" id="shoppingAllResultMap">
+		<result property="foodnum" column="foodnum"/>
+		
+		<association property="food" javaType="com.etc.entity.Food">
+			<id property="foodid" column="foodid"/>
+			<result property="foodprice" column="foodprice"/>
+			<result property="onsale" column="onsale"/>
+			<result property="fimgpath" column="fimgpath"/>
+			<result property="foodcontent" column="foodcontent"/>
+		</association>
+		
+		<association property="shop" javaType="com.etc.entity.Shop">
+			<id property="shopid" column="shopid"/>
+			<result property="shopname" column="shopname"/>
+			<result property="shopadd" column="shopadd"/>
+			<result property="sendmoney" column="sendmoney"/>
+			<result property="score" column="score"/>
+			<result property="monthsalas" column="monthsalas"/>	
+		</association>
+			
+		<association property="user" javaType="com.etc.entity.User">
+			<id property="userID" column="userID"/>
+			<result property="account" column="account"/>
+			<result property="password" column="password"/>
+			<result property="alipayaccount" column="alipayaccount"/>
+			<result property="wechataccount" column="wechataccount"/>
+			<result property="userphonenum" column="userphonenum"/>
+			<result property="isvip" column="isvip"/>
+			<result property="money" column="money"/>
+			<result property="usersex" column="usersex"/>
+			<result property="username" column="username"/>
+			<result property="viptime" column="viptime"/>
+		</association>	
+
+			
+	</resultMap>
+	
 
 	<select id="findAllShopping" resultMap="shoppingResultMap">
 		select * from shopping

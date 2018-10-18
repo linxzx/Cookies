@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+  <mapper namespace="com.etc.dao.IUserRedPacketMapper">	
+		
+	<resultMap type="com.etc.entity.Order" id="orederResultMap">
+		<id property="orderid" column="orderid"/>
+		<result property="ordertime" column="ordertime"/>
+		<result property="reachtime" column="reachtime"/>
+		<result property="bocost" column="bocost"/>
+		<result property="reachcost" column="reachcost"/>
+	</resultMap>	
+		
+		
+	<resultMap type="com.etc.entity.Order" id="orederAndUserResultMap">
+		
+		<id property="orderid" column="orderid"/>
+		<result property="ordertime" column="ordertime"/>
+		<result property="reachtime" column="reachtime"/>
+		<result property="bocost" column="bocost"/>
+		<result property="reachcost" column="reachcost"/>
+		
+		<association property="user" javaType="com.etc.entity.User">
+			<id property="userID" column="userID"/>
+			<result property="account" column="account"/>
+			<result property="password" column="password"/>
+			<result property="alipayaccount" column="alipayaccount"/>
+			<result property="wechataccount" column="wechataccount"/>
+			<result property="userphonenum" column="userphonenum"/>
+			<result property="isvip" column="isvip"/>
+			<result property="money" column="money"/>
+			<result property="usersex" column="usersex"/>
+			<result property="username" column="username"/>
+			<result property="viptime" column="viptime"/>
+		</association>
+		
+	</resultMap>
+	
+	<resultMap type="com.etc.entity.Order" id="orederAndShopResultMap">
+		
+		<id property="orderid" column="orderid"/>
+		<result property="ordertime" column="ordertime"/>
+		<result property="reachtime" column="reachtime"/>
+		<result property="bocost" column="bocost"/>
+		<result property="reachcost" column="reachcost"/>
+		
+		
+		
+		<association property="shop" javaType="com.etc.entity.Shop">
+			<id property="shopid" column="shopid"/>
+			<result property="shopname" column="shopname"/>
+			<result property="shopadd" column="shopadd"/>
+			<result property="sendmoney" column="sendmoney"/>
+			<result property="score" column="score"/>
+			<result property="monthsalas" column="monthsalas"/>
+		</association>
+		
+	</resultMap>
+	
+	<resultMap type="com.etc.entity.Order" id="orderAllResultMap">
+		
+		<id property="orderid" column="orderid"/>
+		<result property="ordertime" column="ordertime"/>
+		<result property="reachtime" column="reachtime"/>
+		<result property="bocost" column="bocost"/>
+		<result property="reachcost" column="reachcost"/>
+		
+		
+		<association property="user" javaType="com.etc.entity.User">
+			<id property="userID" column="userID"/>
+			<result property="account" column="account"/>
+			<result property="password" column="password"/>
+			<result property="alipayaccount" column="alipayaccount"/>
+			<result property="wechataccount" column="wechataccount"/>
+			<result property="userphonenum" column="userphonenum"/>
+			<result property="isvip" column="isvip"/>
+			<result property="money" column="money"/>
+			<result property="usersex" column="usersex"/>
+			<result property="username" column="username"/>
+			<result property="viptime" column="viptime"/>
+		</association>
+		
+		
+		
+		<association property="shop" javaType="com.etc.entity.Shop">
+			<id property="shopid" column="shopid"/>
+			<result property="shopname" column="shopname"/>
+			<result property="shopadd" column="shopadd"/>
+			<result property="sendmoney" column="sendmoney"/>
+			<result property="score" column="score"/>
+			<result property="monthsalas" column="monthsalas"/>
+		</association>
+		
+		
+		
+		
+		<association property="rider" javaType="com.etc.entity.Rider">
+			<id property="riderid" column="riderid "/>
+			<result property="ridername" column="ridername"/>
+			<result property="ridephonenum" column="ridephonenum"/>
+			<result property="ridesex" column="ridesex"/>
+		
+		</association>
+		
+		
+		<association property="userredpacket" javaType="com.etc.entity.UserRedPacket">
+			<id property="uredid" column="uredid"/>
+		</association>
+		
+		
+		<association property="discount" javaType="com.etc.entity.Discount">
+			<id property="sdiscid" column="sdiscid"/>
+			<result property="discount" column="discount"/>
+			<result property="fulldisc" column="fulldisc"/>
+			<result property="discontent" column="discontent"/>
+		</association>
+
+		
+		
+		<collection property="ordertofoodlist" ofType="com.etc.entity.OrderToFood">
+
+
+		</collection>
+		
+		
+		
+
+	</resultMap>
+	
+	
+  </mapper>

@@ -14,6 +14,31 @@
 		<result property="addnum" column="addnum"/>
 		<result property="isdefault" column="isdefault"/>
 		
+		
+	</resultMap>
+	
+	<resultMap type="com.etc.entity.Address" id="addressAllResultMap">
+		<id property="addid" column="addid"/>
+		<result property="addname" column="addname"/>
+		<result property="addphonenum" column="addphonenum"/>
+		<result property="addsex" column="addsex"/>
+		<result property="address" column="address"/>
+		<result property="addnum" column="addnum"/>
+		<result property="isdefault" column="isdefault"/>
+		
+		<association property="user" javaType="com.etc.entity.User">
+			<id property="userID" column="userID"/>
+			<result property="account" column="account"/>
+			<result property="password" column="password"/>
+			<result property="alipayaccount" column="alipayaccount"/>
+			<result property="wechataccount" column="wechataccount"/>
+			<result property="userphonenum" column="userphonenum"/>
+			<result property="isvip" column="isvip"/>
+			<result property="money" column="money"/>
+			<result property="usersex" column="usersex"/>
+			<result property="username" column="username"/>
+			<result property="viptime" column="viptime"/>
+		</association>
 	</resultMap>
 	
 	

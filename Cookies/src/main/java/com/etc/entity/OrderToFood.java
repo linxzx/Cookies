@@ -2,24 +2,25 @@ package com.etc.entity;
 
 import java.util.List;
 
-public class Ordertofood {
+public class OrderToFood {
 //	private int orderid;
 //	private int foodid;
 	
-	private List<Food> foodlist;
+	private Food food;
 	
 	private Order order;
 	
 	
 
 
-	public List<Food> getFoodlist() {
-		return foodlist;
+
+	public Food getFood() {
+		return food;
 	}
 
 
-	public void setFoodlist(List<Food> foodlist) {
-		this.foodlist = foodlist;
+	public void setFood(Food food) {
+		this.food = food;
 	}
 
 
@@ -33,22 +34,25 @@ public class Ordertofood {
 	}
 
 
-	public Ordertofood() {
+	public OrderToFood() {
 		// TODO Auto-generated constructor stub
 	}
 
 
 	@Override
 	public String toString() {
-		return "Ordertofood [foodlist=" + foodlist + ", order=" + order + "]";
+		return "OrderToFood [food=" + food + ", order=" + order + "]";
 	}
 
 
-	public Ordertofood(List<Food> foodlist, Order order) {
+	public OrderToFood(Food food, Order order) {
 		super();
-		this.foodlist = foodlist;
+		this.food = food;
 		this.order = order;
 	}
+
+
+
 	
 	
 

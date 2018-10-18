@@ -1,5 +1,7 @@
 package com.etc.entity;
 
+import java.util.List;
+
 public class Discount {
 	private int sdiscid;
 	private double discount;
@@ -8,6 +10,8 @@ public class Discount {
 	
 	private Shop shop;
 	
+	
+	private List<Order> orderlist;
 	
 	
 	public Shop getShop() {
@@ -21,11 +25,12 @@ public class Discount {
 
 	
 	
+	
 	@Override
 	public String toString() {
 		return "Discount [sdiscid=" + sdiscid + ", discount=" + discount
 				+ ", fulldisc=" + fulldisc + ", discontent=" + discontent
-				+ ", shop=" + shop + "]";
+				+ ", shop=" + shop + ", orderlist=" + orderlist + "]";
 	}
 
 	public Discount() {
@@ -58,15 +63,26 @@ public class Discount {
 		this.discontent = discontent;
 	}
 
+	public List<Order> getOrderlist() {
+		return orderlist;
+	}
+
+	public void setOrderlist(List<Order> orderlist) {
+		this.orderlist = orderlist;
+	}
+
 	public Discount(int sdiscid, double discount, double fulldisc,
-			String discontent, Shop shop) {
+			String discontent, Shop shop, List<Order> orderlist) {
 		super();
 		this.sdiscid = sdiscid;
 		this.discount = discount;
 		this.fulldisc = fulldisc;
 		this.discontent = discontent;
 		this.shop = shop;
+		this.orderlist = orderlist;
 	}
+
+
 
 	
 }
