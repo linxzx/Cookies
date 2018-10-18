@@ -9,7 +9,10 @@ import com.etc.entity.User;
 @Repository("userMapper")
 public interface IUserMapper {
 	//搜索
-	public User findUser(@Param("account") String account,@Param("password") String password);
+	public User findUser(
+			@Param("account") String account,
+			@Param("password") String password,
+			@Param("userphonenum")String userphonenum);
 	
 	//通过是用户的名字，查询某个地址
 	public User findAddressByUserName(User user);

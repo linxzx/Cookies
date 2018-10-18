@@ -22,17 +22,16 @@ public class userController {
 	                                                                                
 	
 	@RequestMapping(value="findUser")
-	public String findUser(String account,String password,HttpSession session){
+	public String findUser(String account,String password,String userphonenum,String url,HttpSession session){
 		
-		session.setAttribute("user", userService.findUser(account,password));
-		String url = (String) session.getAttribute("url");
+		session.setAttribute("finduser", userService.findUser(account,password,userphonenum));
 		return url;
 	}
 	
 	@RequestMapping(value="addUser")
 	public String addUser(String account, String password, String userphonenum,
-			String username,String usersex,String url){
-				User user =new User(account,password,userphonenum,username,usersex);
+			String username,String usersex,String url,HttpSession session){
+				User user =(User) session.getAttribute("adduser");
 				userService.addUser(user);
 				return url;
 	}
