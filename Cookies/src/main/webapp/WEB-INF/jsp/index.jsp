@@ -5,7 +5,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 %>
 <!DOCTYPE html>
 <html>
+
 	<head>
+	<base href="<%=basePath%>">
 		<meta charset="UTF-8">
 		<title>Welcome to Cookies</title>
 		<link rel="stylesheet" href="<%=basePath %>style/css/index.css" />
@@ -19,7 +21,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				<!--
                 	界面
                 -->
-				<a href="#" onclick="openModal2()">注册</a>&nbsp;|&nbsp;<a href="#" id="login" >登录</a>&nbsp;|&nbsp;
+				<a href="web/index#" onclick="openModal2()">注册</a>&nbsp;|&nbsp;<a href="web/index#" id="login" >登录</a>&nbsp;|&nbsp;
 				<input type="button" class="btn btn-default" value="我要开店"/>
 			</div>
 				</div>
@@ -53,17 +55,17 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				</div>
 			</form>
 			
-			<a href="#">忘记密码？</a>
+			<a href="web/index#">忘记密码？</a>
 			<div class="social-icons w3layouts agileits">
 				<p>- 其他登录方式 -</p>
 				<ul>
-					<li class="qq"><a href="#">
+					<li class="qq"><a href="web/index#">
 					<span class="icons w3layouts agileits"></span>
 					<span class="text w3layouts agileits">QQ</span></a></li>
-					<li class="weixin w3ls"><a href="#">
+					<li class="weixin w3ls"><a href="web/index#">
 					<span class="icons w3layouts"></span>
 					<span class="text w3layouts agileits">微信</span></a></li>
-					<li class="weibo aits"><a href="#">
+					<li class="weibo aits"><a href="web/index#">
 					<span class="icons agileits"></span>
 					<span class="text w3layouts agileits">微博</span></a></li>					
 				</ul>
@@ -76,10 +78,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			<div id="close" class="glyphicon glyphicon-remove" onclick="closeModal2()"></div>
 			<div id="" class="register">
 			<h2>注册</h2>
-			<form action="register/getPwData" method="post">
-				<input type="text" Name="uid" placeholder="用户名" required="">
+			<form action="<%=basePath %>register/getPwData" method="get">
 				<input type="text" Name="account" placeholder="账号" required="">
-				<input type="password" Name="Password" placeholder="密码" required="">
+				<input type="password" Name="password" placeholder="密码" required="">
 				<input type="radio" Name="usersex" checked="checked" value="男" required=""><font color="white">男</font>
 				<input type="radio" Name="usersex" checked="checked" value="女" required=""><font color="white">女</font>
 				<input type="text" Name="userphonenum" placeholder="手机号码 " required="">
@@ -101,3 +102,4 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
 	<script type="text/javascript" src="<%=basePath %>style/js/jquery-1.8.3.min.js" ></script>
 	<script type="text/javascript" src="<%=basePath %>style/js/login.js" ></script>
+	<script type="text/javascript" src="<%=basePath %>style/js/public.js"></script>

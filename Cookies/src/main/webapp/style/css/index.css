@@ -10,8 +10,6 @@
 	
 }
 .top{
-	
-	
 	height: 150px;
 }
 .top1{
@@ -19,11 +17,24 @@
 	float: right;
 	margin-top: 80px;
 	padding-right:100px;
-}
-.logo{
 	
+}
+
+.top1 a,.top1 a:visited {
+	color:rgb(115,215,215);
+	font-size:medium;
+	boxShadow:10px 10px 5px black;
+}
+
+.top1 a:hover {
+	text-decoration: none;
+	color:white;
+	
+}
+
+
+.logo{
 		margin: auto;
-		
 		height: 302px;
 		width: 275px;	
 		float: none;
@@ -71,7 +82,7 @@
 
 
 
-/*ç™»é™†çš„CSS*/
+/*µÇÂ½µÄCSS*/
 
 /*-- Reset Code --*/
 

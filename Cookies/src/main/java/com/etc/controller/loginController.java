@@ -9,9 +9,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping(value="login")
 public class loginController {
 	
+	
 	//获取账号和密码
 	@RequestMapping(value="getAcandPw")
-	public String  getAcandPw(String account,String password){
+	public String  getAcandPw(String account,String password,HttpSession session){
+		
 		String url = "redirect:/login/checkAcandPw";
 		return "redirect:/user/findUser?account="+account+"&password="+password+"&url="+url;
 	}
@@ -20,13 +22,13 @@ public class loginController {
 	@RequestMapping(value="checkAcandPw")
 	public String checkAcandPw(HttpSession session){
 	
-		if(session.getAttribute("user")==null){
+		if(session.getAttribute("finduser")==null){
 			System.out.println("账号或者密码错误");
 		}else{
 			System.out.println("登录成功");
 		}
 		
-		return "redirect:/web/index";
+		return  (String) session.getAttribute("returnURL");
 	}
 
 }

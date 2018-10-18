@@ -5,7 +5,7 @@ import com.etc.entity.User;
 
 public interface IUserService {
 	
-	public User findUser(String account,String password);
+	public User findUser(String account,String password,String userphonenum);
 	
 	//通过是用户的名字，查询某个地址
 	public User findAddressByUserName(User user);

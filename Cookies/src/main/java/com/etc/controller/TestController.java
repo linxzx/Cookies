@@ -22,20 +22,20 @@ public class TestController {
 	private IUserService userService;
 	                                                                                
 	
-	@RequestMapping(value="testFindAllAddress")
+	@RequestMapping(value="testUser")
 	public ModelAndView findUser(){
-		
-		
+
 		User user = new User();
 		user.setUsername("lin");
 		
 		ModelAndView mav = new ModelAndView("test");
-	
-		
+
 		mav.addObject("test", userService.findAddressByUserName(user));
 		
 		System.out.println(userService.findAddressByUserName(user));
 		return mav;
+		
+		
 	}
 	
 

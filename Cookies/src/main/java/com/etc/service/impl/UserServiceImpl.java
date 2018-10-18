@@ -19,14 +19,11 @@ public class UserServiceImpl implements IUserService {
 	private IUserMapper userMapper;
 	
 	@Override
-	public User findUser(String account,String password) {
-		if(password == ""||password == null){
-			password = "0";
-		}
+	public User findUser(String account,String password,String userphonenum) {
 		
-		return userMapper.findUser(account,password);
+		return userMapper.findUser(account,password,userphonenum);
 	}
-
+	
 	@Override
 	public User findAddressByUserName(User user) {
 		// TODO Auto-generated method stub
@@ -42,8 +39,7 @@ public class UserServiceImpl implements IUserService {
 	
 	@Override
 	public int addUser(User user) {
-		
+		System.out.println("SERVICE"+user.toString());
 		return userMapper.addUser(user);
 	}
-
 }
