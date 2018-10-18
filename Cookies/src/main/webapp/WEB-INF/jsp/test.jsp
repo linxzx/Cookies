@@ -5,7 +5,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 %>
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html>
+<html >
   <head>
     <base href="<%=basePath%>">
     
@@ -22,10 +22,36 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
   </head>
   
-  <body>
-  
-  
-  
-	
+  <body >
+    This is my JSP page. <br>
+    <form action="register/getPwData" method="get">
+	    <input type="text" name="account">
+	    <br>
+	    <input type="text" name="password">
+	    <br>
+	    <input type="text" name="userphonenum">
+	    <br>
+	    <input type="text" name="username">
+	    <br>
+	    <input type="text" name="usersex">
+	    <br>
+	    <input type="submit" value="提交">
+    </form>
+    <input type="button" value="ajax" onclick="postURL()">
+    <br>
   </body>
 </html>
+<script type="text/javascript" src="<%=basePath %>style/js/jquery-1.8.3.min.js" ></script>
+<script type="text/javascript">
+	
+	$(document).ready(postURL());
+	
+function postURL(){
+		var test = window.location.pathname;
+		var returnURL = test.substring(9);
+		 $.post("public/getURL", {  
+                returnURL : returnURL,  
+            }); 
+}
+
+</script>

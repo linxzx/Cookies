@@ -72,6 +72,9 @@
 		<if test="password !=null and password !=''">
 			and password = #{password}
 		</if>
+		<if test="userphonenum !=null and userphonenum !=''">
+			or userphonenum = #{userphonenum}
+		</if>
 	</select>
 	
 	
