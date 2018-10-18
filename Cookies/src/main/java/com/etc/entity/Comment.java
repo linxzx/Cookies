@@ -4,7 +4,7 @@ import java.util.Date;
 
 public class Comment {
 	private int comid;
-	private int shopid;
+//	private int shopid;
 	private String comcontent;
 	private int userid;
 	private Date comtime;
@@ -31,12 +31,7 @@ public class Comment {
 	public void setComid(int comid) {
 		this.comid = comid;
 	}
-	public int getShopid() {
-		return shopid;
-	}
-	public void setShopid(int shopid) {
-		this.shopid = shopid;
-	}
+
 	public String getComcontent() {
 		return comcontent;
 	}
@@ -67,25 +62,26 @@ public class Comment {
 	public void setComimgpath(String comimgpath) {
 		this.comimgpath = comimgpath;
 	}
-	public Comment(int comid, int shopid, String comcontent, int userid,
-			Date comtime, int comstar, String comimgpath) {
+	public Comment(int comid, String comcontent, int userid, Date comtime,
+			int comstar, String comimgpath, Shop shop) {
 		super();
 		this.comid = comid;
-		this.shopid = shopid;
 		this.comcontent = comcontent;
 		this.userid = userid;
 		this.comtime = comtime;
 		this.comstar = comstar;
 		this.comimgpath = comimgpath;
+		this.shop = shop;
 	}
-	
 	@Override
 	public String toString() {
-		return "Comment [comid=" + comid + ", shopid=" + shopid + ", comcontent="
-				+ comcontent + ", userid=" + userid + ", comtime=" + comtime
-				+ ", comstar=" + comstar + ", comimgpath=" + comimgpath + ", shop="
-				+ shop + "]";
+		return "Comment [comid=" + comid + ", comcontent=" + comcontent
+				+ ", userid=" + userid + ", comtime=" + comtime + ", comstar="
+				+ comstar + ", comimgpath=" + comimgpath + ", shop=" + shop
+				+ "]";
 	}
+
+	
 
 
 }

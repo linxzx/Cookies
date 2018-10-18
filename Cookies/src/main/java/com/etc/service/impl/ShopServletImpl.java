@@ -28,6 +28,12 @@ public class ShopServletImpl implements IShopService {
 		// TODO Auto-generated method stub
 		return shopMapper.findShopByName(shop);
 	}
+	
+	@Override
+	public Shop findFoodByShopName(Shop shop) {
+		// TODO Auto-generated method stub
+		return shopMapper.findFoodByShopName(shop);
+	}
 
 	@Override
 	public int addShop(Shop shop) {

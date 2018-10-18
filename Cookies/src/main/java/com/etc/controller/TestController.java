@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.etc.entity.User;
-import com.etc.service.IAddressService;
+
 import com.etc.service.IUserService;
 
 
@@ -18,8 +18,8 @@ import com.etc.service.IUserService;
 public class TestController {
 	
 	@Autowired
-	@Qualifier("addressService")
-	private IAddressService addressServlet;
+	@Qualifier("userService")
+	private IUserService userService;
 	                                                                                
 	
 	@RequestMapping(value="testFindAllAddress")
@@ -32,7 +32,9 @@ public class TestController {
 		ModelAndView mav = new ModelAndView("test");
 	
 		
-		mav.addObject("test", addressServlet.findAddressByUserName(user));
+		mav.addObject("test", userService.findAddressByUserName(user));
+		
+		System.out.println(userService.findAddressByUserName(user));
 		return mav;
 	}
 	

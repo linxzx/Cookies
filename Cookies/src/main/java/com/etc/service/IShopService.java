@@ -13,6 +13,9 @@ public interface IShopService {
 	//通过是商家名字，查询某个商家
 	public Shop findShopByName(Shop shop);
 	
+	//通过商家Name查询属于商家的食物
+	public Shop findFoodByShopName(Shop shop);
+	
 	//添加商家
 	public int addShop(Shop shop);
 	

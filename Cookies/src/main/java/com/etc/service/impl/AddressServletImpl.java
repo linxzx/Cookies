@@ -26,11 +26,6 @@ public class AddressServletImpl implements IAddressService {
 		return addressMapper.findAllAddress();
 	}
 
-	@Override
-	public Address findAddressByUserName(User user) {
-		// TODO Auto-generated method stub
-		return addressMapper.findAddressByUserName(user);
-	}
 
 	@Override
 	public int addAddress(Address address) {

@@ -24,11 +24,7 @@ public class ShoppingServletImpl implements IShoppingService {
 		return shoppingMapper.findAllShopping();
 	}
 
-	@Override
-	public User findShoppingByUserName(User user) {
-		// TODO Auto-generated method stub
-		return shoppingMapper.findShoppingByUserName(user);
-	}
+
 
 	@Override
 	public Shopping findshoppingByAllId(Shopping shopping) {

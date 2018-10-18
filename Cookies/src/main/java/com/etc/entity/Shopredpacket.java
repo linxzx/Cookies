@@ -10,7 +10,7 @@ public class Shopredpacket {
 	private double discount;
 	private double fulldisc;
 	private String redcontent;
-	private int shopid;
+//	private int shopid;
 	private Date rbegintime;
 	private Date rendtime;
 	
@@ -64,12 +64,7 @@ public class Shopredpacket {
 	public void setRedcontent(String redcontent) {
 		this.redcontent = redcontent;
 	}
-	public int getShopid() {
-		return shopid;
-	}
-	public void setShopid(int shopid) {
-		this.shopid = shopid;
-	}
+
 	public Date getRbegintime() {
 		return rbegintime;
 	}
@@ -82,28 +77,29 @@ public class Shopredpacket {
 	public void setRendtime(Date rendtime) {
 		this.rendtime = rendtime;
 	}
+	@Override
+	public String toString() {
+		return "Shopredpacket [sredid=" + sredid + ", sredname=" + sredname
+				+ ", discount=" + discount + ", fulldisc=" + fulldisc
+				+ ", redcontent=" + redcontent + ", rbegintime=" + rbegintime
+				+ ", rendtime=" + rendtime + ", shop=" + shop
+				+ ", userredpacketlist=" + userredpacketlist + "]";
+	}
 	public Shopredpacket(int sredid, String sredname, double discount,
-			double fulldisc, String redcontent, int shopid, Date rbegintime,
-			Date rendtime) {
+			double fulldisc, String redcontent, Date rbegintime, Date rendtime,
+			Shop shop, List<Userredpacket> userredpacketlist) {
 		super();
 		this.sredid = sredid;
 		this.sredname = sredname;
 		this.discount = discount;
 		this.fulldisc = fulldisc;
 		this.redcontent = redcontent;
-		this.shopid = shopid;
 		this.rbegintime = rbegintime;
 		this.rendtime = rendtime;
+		this.shop = shop;
+		this.userredpacketlist = userredpacketlist;
 	}
-	
-	@Override
-	public String toString() {
-		return "Shopredpacket [sredid=" + sredid + ", sredname=" + sredname
-				+ ", discount=" + discount + ", fulldisc=" + fulldisc
-				+ ", redcontent=" + redcontent + ", shopid=" + shopid
-				+ ", rbegintime=" + rbegintime + ", rendtime=" + rendtime
-				+ ", shop=" + shop + ", userredpacket=" + userredpacketlist + "]";
-	}
+
 	
 	
 

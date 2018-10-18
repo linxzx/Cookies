@@ -7,7 +7,6 @@
 		
 	<resultMap type="com.etc.entity.Address" id="addressResultMap">
 		<id property="addid" column="addid"/>
-		<result property="userid" column="userid"/>
 		<result property="addname" column="addname"/>
 		<result property="addphonenum" column="addphonenum"/>
 		<result property="addsex" column="addsex"/>
@@ -18,41 +17,11 @@
 	</resultMap>
 	
 	
-	<resultMap type="com.etc.entity.User" id="userResultMap">
-		<id property="userID" column="userID"/>
-		<result property="account" column="account"/>
-		<result property="password" column="password"/>
-		<result property="alipayaccount" column="alipayaccount"/>
-		<result property="wechataccount" column="wechataccount"/>
-		<result property="userphonenum" column="userphonenum"/>
-		<result property="isvip" column="isvip"/>
-		<result property="money" column="money"/>
-		<result property="usersex" column="usersex"/>
-		<result property="username" column="username"/>
-		<result property="viptime" column="viptime"/>
-			
-		<association property="addresslist" javaType="com.etc.entity.Address" >
-					
-			<id property="addid" column="addid"/>
-			<result property="userid" column="userid"/>
-			<result property="addname" column="addname"/>
-			<result property="addphonenum" column="addphonenum"/>
-			<result property="addsex" column="addsex"/>
-			<result property="address" column="address"/>
-			<result property="addnum" column="addnum"/>
-			<result property="isdefault" column="isdefault"/>
-			
-		</association>
-		
-	</resultMap>
-	
-	<select id="findAllAddress" resultMap="userResultMap">
+	<select id="findAllAddress" resultMap="addressResultMap">
 		select * from address
 	</select>
 	
-	<select id="findAddressByUserName" resultMap="userResultMap">
-		select * from user u,address a where u.userid=a.userid AND u.username = "lin";
-	</select>
+
 	
 	<insert id="addAddress" parameterType="com.etc.entity.Address">
 		insert into user 

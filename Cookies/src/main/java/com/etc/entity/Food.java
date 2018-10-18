@@ -4,8 +4,8 @@ import java.util.List;
 
 public class Food {
 	private int foodid;
-	private String Foodname;
-	private int shopid;
+	private String foodname;
+
 	private double foodprice;
 	private boolean onsale;
 	private String fimgpath;
@@ -13,6 +13,7 @@ public class Food {
 	
 	private List<Shopping> shoppinglist;
 	private Ordertofood ordertofood;
+	
 	private Shop shop;
 	
 	
@@ -53,19 +54,13 @@ public class Food {
 	}
 	
 	public String getFoodname() {
-		return Foodname;
+		return foodname;
 	}
 
 	public void setFoodname(String foodname) {
-		Foodname = foodname;
+		foodname = foodname;
 	}
 
-	public int getShopid() {
-		return shopid;
-	}
-	public void setShopid(int shopid) {
-		this.shopid = shopid;
-	}
 	public double getFoodprice() {
 		return foodprice;
 	}
@@ -90,27 +85,31 @@ public class Food {
 	public void setFoodcontent(String foodcontent) {
 		this.foodcontent = foodcontent;
 	}
-	
-	public Food(int foodid,String foodname, int shopid, double foodprice, boolean onsale,
-			String fimgpath, String foodcontent) {
+
+	@Override
+	public String toString() {
+		return "Food [foodid=" + foodid + ", foodname=" + foodname
+				+ ", foodprice=" + foodprice + ", onsale=" + onsale
+				+ ", fimgpath=" + fimgpath + ", foodcontent=" + foodcontent
+				+ ", shoppinglist=" + shoppinglist + ", ordertofood="
+				+ ordertofood + ", shop=" + shop + "]";
+	}
+
+	public Food(int foodid, String foodname, double foodprice, boolean onsale,
+			String fimgpath, String foodcontent, List<Shopping> shoppinglist,
+			Ordertofood ordertofood, Shop shop) {
 		super();
 		this.foodid = foodid;
-		this.Foodname = foodname;
-		this.shopid = shopid;
+		this.foodname = foodname;
 		this.foodprice = foodprice;
 		this.onsale = onsale;
 		this.fimgpath = fimgpath;
 		this.foodcontent = foodcontent;
+		this.shoppinglist = shoppinglist;
+		this.ordertofood = ordertofood;
+		this.shop = shop;
 	}
-
-	@Override
-	public String toString() {
-		return "Food [foodid=" + foodid + ", Foodname=" + Foodname
-				+ ", shopid=" + shopid + ", foodprice=" + foodprice
-				+ ", onsale=" + onsale + ", fimgpath=" + fimgpath
-				+ ", foodcontent=" + foodcontent + ", shopping=" + shoppinglist
-				+ ", ordertofood=" + ordertofood + ", shop=" + shop + "]";
-	}
+	
 
 
 }

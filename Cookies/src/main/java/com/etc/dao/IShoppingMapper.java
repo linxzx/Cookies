@@ -14,9 +14,7 @@ public interface IShoppingMapper {
 	
 	//查询所有购物车
 	public List<Shopping> findAllShopping();
-	
-	//通过是用户的名字，查询某个购物车
-	public User findShoppingByUserName(User user);
+
 	
 	//通过是三个id查询某个购物车中的物品
 	public Shopping findshoppingByAllId(Shopping shopping);

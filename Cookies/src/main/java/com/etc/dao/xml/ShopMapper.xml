@@ -14,12 +14,36 @@
 		<result property="monthsalas" column="monthsalas"/>
 	</resultMap>
 	
+	
+	
+	<resultMap type="com.etc.entity.Shop" id="shopAndFoodResultMap">
+		<id property="shopid" column="shopid"/>
+		<result property="shopname" column="shopname"/>
+		<result property="shopadd" column="shopadd"/>
+		<result property="sendmoney" column="sendmoney"/>
+		<result property="score" column="score"/>
+		<result property="monthsalas" column="monthsalas"/>
+		
+		<collection property="foodlist" ofType="com.etc.entity.Food">
+			<id property="foodid" column="foodid"/>
+			<result property="foodprice" column="foodprice"/>
+			<result property="onsale" column="onsale"/>
+			<result property="fimgpath" column="fimgpath"/>
+			<result property="foodcontent" column="foodcontent"/>
+		</collection>
+	</resultMap>
+	
+	
 	<select id="findAllShop" resultMap="shopResultMap">
 		select * from shop
 	</select>
 	
 	<select id="findShopByName" resultMap="shopResultMap">
 		select * from shop where shopname = #{shopname}
+	</select>
+	
+	<select id="findFoodByShopName" resultMap="shopResultMap">
+		select * from food f,shop s where shopname = #{shopname} and s.shopid = f.shopid
 	</select>
 	
 	<insert id="addUser" parameterType="com.etc.entity.Shop">

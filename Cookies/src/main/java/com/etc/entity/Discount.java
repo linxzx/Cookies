@@ -2,7 +2,6 @@ package com.etc.entity;
 
 public class Discount {
 	private int sdiscid;
-	private int shopid;
 	private double discount;
 	private double fulldisc;
 	private String discontent;
@@ -19,11 +18,14 @@ public class Discount {
 		this.shop = shop;
 	}
 
+
+	
+	
 	@Override
 	public String toString() {
-		return "Discount [sdiscid=" + sdiscid + ", shopid=" + shopid
-				+ ", discount=" + discount + ", fulldisc=" + fulldisc
-				+ ", discontent=" + discontent + ", shop=" + shop + "]";
+		return "Discount [sdiscid=" + sdiscid + ", discount=" + discount
+				+ ", fulldisc=" + fulldisc + ", discontent=" + discontent
+				+ ", shop=" + shop + "]";
 	}
 
 	public Discount() {
@@ -36,12 +38,7 @@ public class Discount {
 	public void setSdiscid(int sdiscid) {
 		this.sdiscid = sdiscid;
 	}
-	public int getShopid() {
-		return shopid;
-	}
-	public void setShopid(int shopid) {
-		this.shopid = shopid;
-	}
+
 	public double getDiscount() {
 		return discount;
 	}
@@ -60,14 +57,16 @@ public class Discount {
 	public void setDiscontent(String discontent) {
 		this.discontent = discontent;
 	}
-	public Discount(int sdiscid, int shopid, double discount, double fulldisc,
-			String discontent) {
+
+	public Discount(int sdiscid, double discount, double fulldisc,
+			String discontent, Shop shop) {
 		super();
 		this.sdiscid = sdiscid;
-		this.shopid = shopid;
 		this.discount = discount;
 		this.fulldisc = fulldisc;
 		this.discontent = discontent;
+		this.shop = shop;
 	}
 
+	
 }

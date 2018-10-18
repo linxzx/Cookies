@@ -3,8 +3,7 @@ package com.etc.entity;
 public class Userredpacket {
 	
 	private int uredid;
-	private int userid;
-	private int sredid;
+
 	
 	private Order order;
 	private User user;
@@ -16,18 +15,7 @@ public class Userredpacket {
 	public void setUredid(int uredid) {
 		this.uredid = uredid;
 	}
-	public int getUserid() {
-		return userid;
-	}
-	public void setUserid(int userid) {
-		this.userid = userid;
-	}
-	public int getSredid() {
-		return sredid;
-	}
-	public void setSredid(int sredid) {
-		this.sredid = sredid;
-	}
+
 	
 	public Userredpacket() {
 		// TODO Auto-generated constructor stub
@@ -53,19 +41,20 @@ public class Userredpacket {
 	public void setShopredpacket(Shopredpacket shopredpacket) {
 		this.shopredpacket = shopredpacket;
 	}
-	public Userredpacket(int uredid, int userid, int sredid) {
-		super();
-		this.uredid = uredid;
-		this.userid = userid;
-		this.sredid = sredid;
-	}
-	
 	@Override
 	public String toString() {
-		return "Userredpacket [uredid=" + uredid + ", userid=" + userid
-				+ ", sredid=" + sredid + ", order=" + order + ", user=" + user
-				+ ", shopredpacket=" + shopredpacket + "]";
+		return "Userredpacket [uredid=" + uredid + ", order=" + order
+				+ ", user=" + user + ", shopredpacket=" + shopredpacket + "]";
 	}
+	public Userredpacket(int uredid, Order order, User user,
+			Shopredpacket shopredpacket) {
+		super();
+		this.uredid = uredid;
+		this.order = order;
+		this.user = user;
+		this.shopredpacket = shopredpacket;
+	}
+
 	
 	
 

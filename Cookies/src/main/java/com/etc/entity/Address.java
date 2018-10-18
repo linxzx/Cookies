@@ -2,7 +2,7 @@ package com.etc.entity;
 
 public class Address {
 	private int addid;
-	private int userid;
+//	private int userid;
 	private String addname;
 	private String addphonenum;
 	private boolean addsex;
@@ -32,13 +32,13 @@ public class Address {
 		this.addid = addid;
 	}
 	
-	public int getUserid() {
-		return userid;
-	}
-	
-	public void setUserid(int userid) {
-		this.userid = userid;
-	}
+//	public int getUserid() {
+//		return userid;
+//	}
+//	
+//	public void setUserid(int userid) {
+//		this.userid = userid;
+//	}
 	
 	public String getAddname() {
 		return addname;
@@ -88,11 +88,11 @@ public class Address {
 		this.isdefault = isdefault;
 	}
 	
-	public Address(int addid, int userid, String addname, String addphonenum,
+	public Address(int addid, String addname, String addphonenum,
 			boolean addsex, String address, String addnum, boolean isdefault) {
 		super();
 		this.addid = addid;
-		this.userid = userid;
+//		this.userid = userid;
 		this.addname = addname;
 		this.addphonenum = addphonenum;
 		this.addsex = addsex;
@@ -100,14 +100,16 @@ public class Address {
 		this.addnum = addnum;
 		this.isdefault = isdefault;
 	}
-	
+
+
 	@Override
 	public String toString() {
-		return "Address [addid=" + addid + ", userid=" + userid + ", addname="
-				+ addname + ", addphonenum=" + addphonenum + ", addsex=" + addsex
-				+ ", address=" + address + ", addnum=" + addnum + ", isdefault="
-				+ isdefault + ", user=" + user + "]";
+		return "Address [addid=" + addid + ", addname=" + addname
+				+ ", addphonenum=" + addphonenum + ", addsex=" + addsex
+				+ ", address=" + address + ", addnum=" + addnum
+				+ ", isdefault=" + isdefault + ", user=" + user + "]";
 	}
+	
 
 
 

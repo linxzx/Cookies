@@ -31,11 +31,7 @@ public class FoodServletImpl implements IFoodService {
 		return foodMapper.findFoodByFoodId(food);
 	}
 
-	@Override
-	public Shop findFoodByShopName(Shop shop) {
-		// TODO Auto-generated method stub
-		return foodMapper.findFoodByShopName(shop);
-	}
+
 
 	@Override
 	public int addFood(Food food) {

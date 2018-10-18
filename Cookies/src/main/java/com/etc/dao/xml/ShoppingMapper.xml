@@ -6,44 +6,15 @@
   <mapper namespace="com.etc.dao.IShoppingMapper">
   
 	<resultMap type="com.etc.entity.Shopping" id="shoppingResultMap">
-  
-		<id property="userid" column="userid"/>
-		<id property="shopid" column="shopid"/>
-		<id property="foodid" column="foodid"/>
-		<result property="foodnum" column="foodnum"/>
+		<result property="foodnum" column="foodnum"/>	
+	</resultMap>
+	
 
-		
-	</resultMap>
-	
-	
-	<resultMap type="com.etc.entity.User" id="userResultMap">
-		<id property="userID" column="userID"/>
-		<result property="account" column="account"/>
-		<result property="password" column="password"/>
-		<result property="alipayaccount" column="alipayaccount"/>
-		<result property="wechataccount" column="wechataccount"/>
-		<result property="userphonenum" column="userphonenum"/>
-		<result property="isvip" column="isvip"/>
-		<result property="money" column="money"/>
-		<result property="usersex" column="usersex"/>
-		<result property="username" column="username"/>
-		<result property="viptime" column="viptime"/>
-			
-		<association property="shoppinglist" javaType="com.etc.entity.Shopping" >
-			<id property="userid" column="userid"/>
-			<id property="shopid" column="shopid"/>
-			<id property="foodid" column="foodid"/>
-			<result property="foodnum" column="foodnum"/>	
-		</association>
-	</resultMap>
-	
 	<select id="findAllShopping" resultMap="shoppingResultMap">
 		select * from shopping
 	</select>
 	
-	<select id="findShoppingByUserName" resultMap="userResultMap">
-		select * from User u,shop s where  u.username = s.username and  u.username = #{username}
-	</select>
+
 	
 	<select id="findshoppingByAllId" resultMap="shoppingResultMap">
 		select * from shopping where userid = #{userid} and shopid = #{shopid} and foodid = #{foodid} 

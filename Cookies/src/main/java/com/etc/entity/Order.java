@@ -6,14 +6,15 @@ import javax.xml.crypto.Data;
 
 public class Order {
 	
-	private int orderid;
-	private int userid;
-	private int shopid;
-	private int riderid;
+//	private int orderid;
+//	private int userid;
+//	private int shopid;
+//	private int riderid;
 	private Data ordertime;  //下单时间
 	private Data reachtime;  //送达时间
 	private double bocost;   //餐盒费用
 	private double reachcost;
+	
 	private int uredid;  //用户红包id
 	private int sdiscid;//商家优惠id
 	
@@ -59,30 +60,7 @@ public class Order {
 	public Order() {
 		// TODO Auto-generated constructor stub
 	}
-	public int getOrderid() {
-		return orderid;
-	}
-	public void setOrderid(int orderid) {
-		this.orderid = orderid;
-	}
-	public int getUserid() {
-		return userid;
-	}
-	public void setUserid(int userid) {
-		this.userid = userid;
-	}
-	public int getShopid() {
-		return shopid;
-	}
-	public void setShopid(int shopid) {
-		this.shopid = shopid;
-	}
-	public int getRiderid() {
-		return riderid;
-	}
-	public void setRiderid(int riderid) {
-		this.riderid = riderid;
-	}
+
 	public Data getOrdertime() {
 		return ordertime;
 	}
@@ -119,31 +97,33 @@ public class Order {
 	public void setSdiscid(int sdiscid) {
 		this.sdiscid = sdiscid;
 	}
-	public Order(int orderid, int userid, int shopid, int riderid,
-			Data ordertime, Data reachtime, double bocost, double reachcost,
-			int uredid, int sdiscid) {
+	@Override
+	public String toString() {
+		return "Order [ordertime=" + ordertime + ", reachtime=" + reachtime
+				+ ", bocost=" + bocost + ", reachcost=" + reachcost
+				+ ", uredid=" + uredid + ", sdiscid=" + sdiscid + ", user="
+				+ user + ", userredpacket=" + userredpacket + ", shop=" + shop
+				+ ", rider=" + rider + ", oredertofoodlist=" + oredertofoodlist
+				+ "]";
+	}
+	public Order(Data ordertime, Data reachtime, double bocost,
+			double reachcost, int uredid, int sdiscid, User user,
+			Userredpacket userredpacket, Shop shop, Rider rider,
+			List<Ordertofood> oredertofoodlist) {
 		super();
-		this.orderid = orderid;
-		this.userid = userid;
-		this.shopid = shopid;
-		this.riderid = riderid;
 		this.ordertime = ordertime;
 		this.reachtime = reachtime;
 		this.bocost = bocost;
 		this.reachcost = reachcost;
 		this.uredid = uredid;
 		this.sdiscid = sdiscid;
+		this.user = user;
+		this.userredpacket = userredpacket;
+		this.shop = shop;
+		this.rider = rider;
+		this.oredertofoodlist = oredertofoodlist;
 	}
-	@Override
-	public String toString() {
-		return "Order [orderid=" + orderid + ", userid=" + userid + ", shopid="
-				+ shopid + ", riderid=" + riderid + ", ordertime=" + ordertime
-				+ ", reachtime=" + reachtime + ", bocost=" + bocost
-				+ ", reachcost=" + reachcost + ", uredid=" + uredid
-				+ ", sdiscid=" + sdiscid + ", user=" + user
-				+ ", userredpacket=" + userredpacket + ", shop=" + shop
-				+ ", rider=" + rider + ", oredertofood=" + oredertofoodlist + "]";
-	}
+
 	
 	
 	
