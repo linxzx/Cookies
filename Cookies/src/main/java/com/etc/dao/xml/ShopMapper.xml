@@ -5,13 +5,13 @@
   
   <mapper namespace="com.etc.dao.IShopMapper">
   
-  <resultMap type="com.etc.entity.Shop" id="shopResultMap">
+	<resultMap type="com.etc.entity.Shop" id="shopResultMap">
 		<id property="shopid" column="shopid"/>
 		<result property="shopname" column="shopname"/>
 		<result property="shopadd" column="shopadd"/>
 		<result property="sendmoney" column="sendmoney"/>
 		<result property="score" column="score"/>
-		<result property="monthsalas" column="monthsalas"/>
+		<result property="monthsalas" column="monthsalas"/>	
 	</resultMap>
 	
 	
@@ -31,6 +31,73 @@
 			<result property="fimgpath" column="fimgpath"/>
 			<result property="foodcontent" column="foodcontent"/>
 		</collection>
+	</resultMap>
+	
+	
+	<resultMap type="com.etc.entity.Shop" id="shopAllResultMap">
+		<id property="shopid" column="shopid"/>
+		<result property="shopname" column="shopname"/>
+		<result property="shopadd" column="shopadd"/>
+		<result property="sendmoney" column="sendmoney"/>
+		<result property="score" column="score"/>
+		<result property="monthsalas" column="monthsalas"/>
+		
+		<collection property="collectlist" ofType="com.etc.entity.Collect">
+
+		</collection>
+		
+		<collection property="foodlist" ofType="com.etc.entity.Food">
+			<id property="foodid" column="foodid"/>
+			<result property="foodprice" column="foodprice"/>
+			<result property="onsale" column="onsale"/>
+			<result property="fimgpath" column="fimgpath"/>
+			<result property="foodcontent" column="foodcontent"/>
+		</collection>
+		
+		<collection property="orderlist" ofType="com.etc.entity.Order">
+		<id property="orderid" column="orderid"/>
+		<result property="ordertime" column="ordertime"/>
+		<result property="reachtime" column="reachtime"/>
+		<result property="bocost" column="bocost"/>
+		<result property="reachcost" column="reachcost"/>
+		</collection>
+		
+		<collection property="shopredpacketlist" ofType="com.etc.entity.ShopRedPacket">
+			<id property="sredid" column="sredid"/>
+			<result property="sredname" column="sredname"/>
+			<result property="discount" column="discount"/>
+			<result property="fulldisc" column="fulldisc"/>
+			<result property="redcontent" column="redcontent"/>
+			<result property="rbegintime" column="rbegintime"/>
+			<result property="rendtime" column="rendtime"/>
+		</collection>
+		
+		<collection property="shoppinglist" ofType="com.etc.entity.Shopping">
+			<result property="foodnum" column="foodnum"/>	
+		</collection>
+		
+		<collection property="discountlist" ofType="com.etc.entity.Discount">
+			<id property="sdiscid" column="sdiscid"/>
+			<result property="discount" column="discount"/>
+			<result property="fulldisc" column="fulldisc"/>
+			<result property="discontent" column="discontent"/>
+		</collection>
+		
+		<collection property="commentlist" ofType="com.etc.entity.Comment">
+			<id property="sdiscid" column="sdiscid"/>
+			<result property="discount" column="discount"/>
+			<result property="fulldisc" column="fulldisc"/>
+			<result property="discontent" column="discontent"/>
+		</collection>
+		
+		<collection property="foodlist" ofType="com.etc.entity.Food">
+			<id property="foodid" column="foodid"/>
+			<result property="foodprice" column="foodprice"/>
+			<result property="onsale" column="onsale"/>
+			<result property="fimgpath" column="fimgpath"/>
+			<result property="foodcontent" column="foodcontent"/>
+		</collection>
+		
 	</resultMap>
 	
 	

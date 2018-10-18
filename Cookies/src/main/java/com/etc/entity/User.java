@@ -18,7 +18,7 @@ public class User {
 	private Date viptime;
 	
 	private List<Address> addresslist;
-	private List<Userredpacket> userredpacketlist;
+	private List<UserRedPacket> userredpacketlist;
 	private List<Shopping> shoppinglist;
 	private List<Order> orderlist;
 	private List<Collect> collectlist;
@@ -76,13 +76,13 @@ public class User {
 
 
 
-	public List<Userredpacket> getUserredpacketlist() {
+	public List<UserRedPacket> getUserredpacketlist() {
 		return userredpacketlist;
 	}
 
 
 
-	public void setUserredpacketlist(List<Userredpacket> userredpacketlist) {
+	public void setUserredpacketlist(List<UserRedPacket> userredpacketlist) {
 		this.userredpacketlist = userredpacketlist;
 	}
 

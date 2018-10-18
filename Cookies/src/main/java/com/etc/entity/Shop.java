@@ -12,7 +12,7 @@ public class Shop {
 	
 	private List<Collect> collectlist;
 	private List<Order> orderlist;
-	private List<Shopredpacket> shopredpacketlist;
+	private List<ShopRedPacket> shopredpacketlist;
 	private List<Shopping> shoppinglist;
 	private List<Discount> discountlist;
 	private List<Comment> commentlist;
@@ -44,11 +44,11 @@ public class Shop {
 		this.orderlist = order;
 	}
 
-	public List<Shopredpacket> getShopredpacket() {
+	public List<ShopRedPacket> getShopredpacket() {
 		return shopredpacketlist;
 	}
 
-	public void setShopredpacket(List<Shopredpacket> shopredpacket) {
+	public void setShopredpacket(List<ShopRedPacket> shopredpacket) {
 		this.shopredpacketlist = shopredpacket;
 	}
 

@@ -6,37 +6,50 @@ import javax.xml.crypto.Data;
 
 public class Order {
 	
-//	private int orderid;
-//	private int userid;
-//	private int shopid;
-//	private int riderid;
+	private int orderid;
+//	private int userid;		用户
+//	private int shopid;		商店
+//	private int riderid;	骑手
 	private Data ordertime;  //下单时间
 	private Data reachtime;  //送达时间
 	private double bocost;   //餐盒费用
 	private double reachcost;
 	
-	private int uredid;  //用户红包id
-	private int sdiscid;//商家优惠id
+//	private int uredid;  //用户红包id
+//	private int sdiscid;//商家优惠id
 	
 	private User user;
-	private Userredpacket userredpacket;
+	private UserRedPacket userredpacket;
 	private Shop shop;
 	private Rider rider;
+	private Discount discount;
 	
-	private List<Ordertofood> oredertofoodlist;
+	private List<OrderToFood> oredertofoodlist;
 	
 	
 	
+	public Discount getDiscount() {
+		return discount;
+	}
+	public void setDiscount(Discount discount) {
+		this.discount = discount;
+	}
+	public List<OrderToFood> getOredertofoodlist() {
+		return oredertofoodlist;
+	}
+	public void setOredertofoodlist(List<OrderToFood> oredertofoodlist) {
+		this.oredertofoodlist = oredertofoodlist;
+	}
 	public User getUser() {
 		return user;
 	}
 	public void setUser(User user) {
 		this.user = user;
 	}
-	public Userredpacket getUserredpacket() {
+	public UserRedPacket getUserredpacket() {
 		return userredpacket;
 	}
-	public void setUserredpacket(Userredpacket userredpacket) {
+	public void setUserredpacket(UserRedPacket userredpacket) {
 		this.userredpacket = userredpacket;
 	}
 	public Shop getShop() {
@@ -51,16 +64,24 @@ public class Order {
 	public void setRider(Rider rider) {
 		this.rider = rider;
 	}
-	public List<Ordertofood> getOredertofood() {
+	public List<OrderToFood> getOredertofood() {
 		return oredertofoodlist;
 	}
-	public void setOredertofood(List<Ordertofood> oredertofood) {
+	public void setOredertofood(List<OrderToFood> oredertofood) {
 		this.oredertofoodlist = oredertofood;
 	}
 	public Order() {
 		// TODO Auto-generated constructor stub
 	}
 
+	
+	
+	public int getOrderid() {
+		return orderid;
+	}
+	public void setOrderid(int orderid) {
+		this.orderid = orderid;
+	}
 	public Data getOrdertime() {
 		return ordertime;
 	}
@@ -85,45 +106,39 @@ public class Order {
 	public void setReachcost(double reachcost) {
 		this.reachcost = reachcost;
 	}
-	public int getUredid() {
-		return uredid;
-	}
-	public void setUredid(int uredid) {
-		this.uredid = uredid;
-	}
-	public int getSdiscid() {
-		return sdiscid;
-	}
-	public void setSdiscid(int sdiscid) {
-		this.sdiscid = sdiscid;
-	}
+	
 	@Override
 	public String toString() {
-		return "Order [ordertime=" + ordertime + ", reachtime=" + reachtime
-				+ ", bocost=" + bocost + ", reachcost=" + reachcost
-				+ ", uredid=" + uredid + ", sdiscid=" + sdiscid + ", user="
-				+ user + ", userredpacket=" + userredpacket + ", shop=" + shop
-				+ ", rider=" + rider + ", oredertofoodlist=" + oredertofoodlist
-				+ "]";
+		return "Order [orderid=" + orderid + ", ordertime=" + ordertime
+				+ ", reachtime=" + reachtime + ", bocost=" + bocost
+				+ ", reachcost=" + reachcost + ", user=" + user
+				+ ", userredpacket=" + userredpacket + ", shop=" + shop
+				+ ", rider=" + rider + ", discount=" + discount
+				+ ", oredertofoodlist=" + oredertofoodlist + "]";
 	}
-	public Order(Data ordertime, Data reachtime, double bocost,
-			double reachcost, int uredid, int sdiscid, User user,
-			Userredpacket userredpacket, Shop shop, Rider rider,
-			List<Ordertofood> oredertofoodlist) {
+	
+	public Order(int orderid, Data ordertime, Data reachtime, double bocost,
+			double reachcost, User user, UserRedPacket userredpacket,
+			Shop shop, Rider rider, Discount discount,
+			List<OrderToFood> oredertofoodlist) {
 		super();
+		this.orderid = orderid;
 		this.ordertime = ordertime;
 		this.reachtime = reachtime;
 		this.bocost = bocost;
 		this.reachcost = reachcost;
-		this.uredid = uredid;
-		this.sdiscid = sdiscid;
 		this.user = user;
 		this.userredpacket = userredpacket;
 		this.shop = shop;
 		this.rider = rider;
+		this.discount = discount;
 		this.oredertofoodlist = oredertofoodlist;
 	}
 
+	
+	
+
+	
 	
 	
 	

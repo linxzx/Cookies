@@ -12,7 +12,7 @@ public class Food {
 	private String foodcontent;
 	
 	private List<Shopping> shoppinglist;
-	private Ordertofood ordertofood;
+	private List<OrderToFood> ordertofoodlist;
 	
 	private Shop shop;
 	
@@ -32,14 +32,6 @@ public class Food {
 
 	public void setShopping(List<Shopping> shopping) {
 		this.shoppinglist = shopping;
-	}
-
-	public Ordertofood getOrdertofood() {
-		return ordertofood;
-	}
-
-	public void setOrdertofood(Ordertofood ordertofood) {
-		this.ordertofood = ordertofood;
 	}
 
 	public Food() {
@@ -92,12 +84,12 @@ public class Food {
 				+ ", foodprice=" + foodprice + ", onsale=" + onsale
 				+ ", fimgpath=" + fimgpath + ", foodcontent=" + foodcontent
 				+ ", shoppinglist=" + shoppinglist + ", ordertofood="
-				+ ordertofood + ", shop=" + shop + "]";
+				+ ordertofoodlist + ", shop=" + shop + "]";
 	}
 
 	public Food(int foodid, String foodname, double foodprice, boolean onsale,
 			String fimgpath, String foodcontent, List<Shopping> shoppinglist,
-			Ordertofood ordertofood, Shop shop) {
+			List<OrderToFood> ordertofood, Shop shop) {
 		super();
 		this.foodid = foodid;
 		this.foodname = foodname;
@@ -106,9 +98,11 @@ public class Food {
 		this.fimgpath = fimgpath;
 		this.foodcontent = foodcontent;
 		this.shoppinglist = shoppinglist;
-		this.ordertofood = ordertofood;
+		this.ordertofoodlist = ordertofood;
 		this.shop = shop;
 	}
+
+
 	
 
 

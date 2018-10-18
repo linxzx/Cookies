@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+  <mapper namespace="com.etc.dao.IUserRedPacketMapper">	
+		
+	<resultMap type="com.etc.entity.Collect" id="collectAllResultMap">
+		
+		<association property="user" javaType="com.etc.entity.User">
+			<id property="userID" column="userID"/>
+			<result property="account" column="account"/>
+			<result property="password" column="password"/>
+			<result property="alipayaccount" column="alipayaccount"/>
+			<result property="wechataccount" column="wechataccount"/>
+			<result property="userphonenum" column="userphonenum"/>
+			<result property="isvip" column="isvip"/>
+			<result property="money" column="money"/>
+			<result property="usersex" column="usersex"/>
+			<result property="username" column="username"/>
+			<result property="viptime" column="viptime"/>
+		</association>
+		
+		<association property="shop" javaType="com.etc.entity.Shop">
+			<id property="shopid" column="shopid"/>
+			<result property="shopname" column="shopname"/>
+			<result property="shopadd" column="shopadd"/>
+			<result property="sendmoney" column="sendmoney"/>
+			<result property="score" column="score"/>
+			<result property="monthsalas" column="monthsalas"/>			
+		</association>
+		
+	</resultMap>
+
+
+	
+	
+  </mapper>

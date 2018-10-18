@@ -3,7 +3,7 @@ package com.etc.entity;
 import java.util.Date;
 import java.util.List;
 
-public class Shopredpacket {
+public class ShopRedPacket {
 	
 	private int sredid;
 	private String sredname;
@@ -15,7 +15,7 @@ public class Shopredpacket {
 	private Date rendtime;
 	
 	private Shop shop;
-	private List<Userredpacket> userredpacketlist;
+	private List<UserRedPacket> userredpacketlist;
 	
 	
 	
@@ -25,13 +25,13 @@ public class Shopredpacket {
 	public void setShop(Shop shop) {
 		this.shop = shop;
 	}
-	public List<Userredpacket> getUserredpacket() {
+	public List<UserRedPacket> getUserredpacket() {
 		return userredpacketlist;
 	}
-	public void setUserredpacket(List<Userredpacket> userredpacket) {
+	public void setUserredpacket(List<UserRedPacket> userredpacket) {
 		this.userredpacketlist = userredpacket;
 	}
-	public Shopredpacket() {
+	public ShopRedPacket() {
 		// TODO Auto-generated constructor stub
 	}
 	public int getSredid() {
@@ -85,9 +85,9 @@ public class Shopredpacket {
 				+ ", rendtime=" + rendtime + ", shop=" + shop
 				+ ", userredpacketlist=" + userredpacketlist + "]";
 	}
-	public Shopredpacket(int sredid, String sredname, double discount,
+	public ShopRedPacket(int sredid, String sredname, double discount,
 			double fulldisc, String redcontent, Date rbegintime, Date rendtime,
-			Shop shop, List<Userredpacket> userredpacketlist) {
+			Shop shop, List<UserRedPacket> userredpacketlist) {
 		super();
 		this.sredid = sredid;
 		this.sredname = sredname;
