@@ -105,7 +105,7 @@ function getCookieValue(name) {
 }    
 
 function JumpByURL(){
-	 window.location.replace("http://localhost:8080/Cookies/web/adminManage");
+	 window.location.replace("http://localhost:8080/Cookies/web/admin");
 }
 
 

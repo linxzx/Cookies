@@ -1,5 +1,11 @@
 package com.etc.controller;
 
+import java.util.Enumeration;
+
+import javax.servlet.ServletContext;
+import javax.servlet.http.HttpSession;
+import javax.servlet.http.HttpSessionContext;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -25,16 +31,17 @@ public class webController {
 		return "adminlogin";
 	}
 	
-	@RequestMapping(value ="adminManage")
-	public 	String adminManage(){
-		
-		return "redirect:admin";
-	}
-	
 	@RequestMapping(value ="admin")
-	private String admin(){
+	public 	String admin(){
 		
 		return "admin";
 	}
+	
+	@RequestMapping(value ="error")
+	public 	String error(){
+		
+		return "error";
+	}
+	
 	
 }

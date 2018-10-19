@@ -4,6 +4,7 @@ package com.etc.controller;
 import java.io.PrintWriter;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -24,6 +25,7 @@ public class adminLoginController {
 		System.out.println(login);
 		System.out.println(pwd);
 		if(login.equals("admin")&&pwd.equals("wswbb")){
+			request.getSession().setAttribute("adminLogin",true);
 			printWriter.write("true");
 		}else{
 			printWriter.write("flase");
