@@ -103,3 +103,9 @@ function getCookieValue(name) {
     }
     else return "-1";    //搜索失败，返回-1  
 }    
+
+function JumpByURL(){
+	 window.location.replace("http://localhost:8080/Cookies/web/adminManage");
+}
+
+

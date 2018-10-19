@@ -26,6 +26,7 @@ public class loginController {
 			System.out.println("账号或者密码错误");
 		}else{
 			System.out.println("登录成功");
+			session.setAttribute("loginuser", session.getAttribute("finduser"));
 		}
 		
 		return  (String) session.getAttribute("returnURL");

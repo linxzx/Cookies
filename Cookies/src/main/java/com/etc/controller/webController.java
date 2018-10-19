@@ -25,4 +25,16 @@ public class webController {
 		return "adminlogin";
 	}
 	
+	@RequestMapping(value ="adminManage")
+	public 	String adminManage(){
+		
+		return "redirect:admin";
+	}
+	
+	@RequestMapping(value ="admin")
+	private String admin(){
+		
+		return "admin";
+	}
+	
 }

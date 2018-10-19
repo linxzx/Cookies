@@ -92,7 +92,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	
 
 	<script type="text/javascript">
-		var canGetCookie = 0;//是否支持存储Cookie 0 不支持 1 支持
+		var canGetCookie = 1;//是否支持存储Cookie 0 不支持 1 支持
 		var ajaxmockjax = 0;//是否启用虚拟Ajax的请求响 0 不启用  1 启用
 	
 		var CodeVal = 0;
@@ -177,35 +177,31 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	                    $('.login').addClass('testtwo'); //平移特效
 	                }, 300);
 	                setTimeout(function () {
+	                
 	                    $('.authent').show().animate({ right: -320 }, {
 	                        easing: 'easeOutQuint',
 	                        duration: 600,
 	                        queue: false
 	                    });
+	                    
 	                    $('.authent').animate({ opacity: 1 }, {
 	                        duration: 200,
 	                        queue: false
 	                    }).addClass('visible');
 	                }, 500);
-
+					
 	                //登录
 	                var JsonData = '{"login":"'+login+'","pwd":"'+pwd+'", "code":"'+code+'"}';
 					//此处做为ajax内部判断
 					var url = "<%=basePath %>adminLogin/login";
-					if(login == truelogin && pwd == truepwd && code.toUpperCase() == CodeVal.toUpperCase()){
-						url = "<%=basePath %>Ajax/Login";
-					}else{
-						url = "<%=basePath %>Ajax/LoginFalse";
-					}
-					
-					
+				
 										
 					
 	                AjaxPost(url, login,pwd,
 	                			
 	                                function () {
 	                                    //ajax加载中
-	                                    
+	                                   
 	                                },
 	                                function (data) {
 	                                    //ajax返回 
@@ -231,7 +227,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	                                            $('.success').fadeIn(1000);
 	                                            $('.success').html("登录成功<br /><br />欢迎回来");
 												//跳转操作
-												
+													setTimeout(JumpByURL, 2000);
+													JumpByURL();
 	                                        } else {
 	                                            AjaxErro({"Status":"Erro","Erro":"账号名或密码或验证码有误"});
 	                                        }
