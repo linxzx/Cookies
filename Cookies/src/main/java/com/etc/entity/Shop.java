@@ -8,7 +8,8 @@ public class Shop {
 	private String shopname;
 	private String shopadd;
 	private double sendmoney;
-	private int monthsales;
+	private int monthsalas;
+	private int score;
 	
 	private List<Collect> collectlist;
 	private List<Order> orderlist;
@@ -105,11 +106,76 @@ public class Shop {
 		this.sendmoney = sendmoney;
 	}
 	public int getMonthsales() {
-		return monthsales;
+		return monthsalas;
 	}
 	public void setMonthsales(int monthsales) {
-		this.monthsales = monthsales;
+		this.monthsalas = monthsales;
 	}
+	
+	public int getScore() {
+		return score;
+	}
+
+	public void setScore(int score) {
+		this.score = score;
+	}
+
+	public List<Collect> getCollectlist() {
+		return collectlist;
+	}
+
+	public void setCollectlist(List<Collect> collectlist) {
+		this.collectlist = collectlist;
+	}
+
+	public List<Order> getOrderlist() {
+		return orderlist;
+	}
+
+	public void setOrderlist(List<Order> orderlist) {
+		this.orderlist = orderlist;
+	}
+
+	public List<ShopRedPacket> getShopredpacketlist() {
+		return shopredpacketlist;
+	}
+
+	public void setShopredpacketlist(List<ShopRedPacket> shopredpacketlist) {
+		this.shopredpacketlist = shopredpacketlist;
+	}
+
+	public List<Shopping> getShoppinglist() {
+		return shoppinglist;
+	}
+
+	public void setShoppinglist(List<Shopping> shoppinglist) {
+		this.shoppinglist = shoppinglist;
+	}
+
+	public List<Discount> getDiscountlist() {
+		return discountlist;
+	}
+
+	public void setDiscountlist(List<Discount> discountlist) {
+		this.discountlist = discountlist;
+	}
+
+	public List<Comment> getCommentlist() {
+		return commentlist;
+	}
+
+	public void setCommentlist(List<Comment> commentlist) {
+		this.commentlist = commentlist;
+	}
+
+	public List<Food> getFoodlist() {
+		return foodlist;
+	}
+
+	public void setFoodlist(List<Food> foodlist) {
+		this.foodlist = foodlist;
+	}
+
 	public Shop(int shopid, String shopname, String shopadd, double sendmoney,
 			int monthsales) {
 		super();
@@ -117,18 +183,22 @@ public class Shop {
 		this.shopname = shopname;
 		this.shopadd = shopadd;
 		this.sendmoney = sendmoney;
-		this.monthsales = monthsales;
+		this.monthsalas = monthsales;
 	}
 
 	@Override
 	public String toString() {
 		return "Shop [shopid=" + shopid + ", shopname=" + shopname
 				+ ", shopadd=" + shopadd + ", sendmoney=" + sendmoney
-				+ ", monthsales=" + monthsales + ", collect=" + collectlist
-				+ ", order=" + orderlist + ", shopredpacket=" + shopredpacketlist
-				+ ", shopping=" + shoppinglist + ", discount=" + discountlist
-				+ ", comment=" + commentlist + ", food=" + foodlist + "]";
+				+ ", monthsales=" + monthsalas + ", score=" + score
+				+ ", collectlist=" + collectlist + ", orderlist=" + orderlist
+				+ ", shopredpacketlist=" + shopredpacketlist
+				+ ", shoppinglist=" + shoppinglist + ", discountlist="
+				+ discountlist + ", commentlist=" + commentlist + ", foodlist="
+				+ foodlist + "]";
 	}
+
+
 	
 
 	

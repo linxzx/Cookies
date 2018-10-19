@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.etc.entity.User;
-
+import com.etc.service.IShopService;
 import com.etc.service.IUserService;
 
 
@@ -28,14 +28,31 @@ public class TestController {
 		User user = new User();
 		user.setUsername("lin");
 		
-		ModelAndView mav = new ModelAndView("MyJsp");
+		ModelAndView mav = new ModelAndView("adminindex");
 
 		mav.addObject("test", userService.findAddressByUserName(user));
 		
-		System.out.println(userService.findAddressByUserName(user));
+//		System.out.println(userService.findAddressByUserName(user));
 		return mav;
 		
 		
+	}
+	
+	@Autowired
+	@Qualifier("shopService")
+	private IShopService shopService;
+	
+	
+	@RequestMapping(value="testShop")
+	public ModelAndView findShop(){
+		
+		ModelAndView mav = new ModelAndView("adminindex");
+
+		mav.addObject("foodOfShopList", shopService.findFoodOfShop());
+		
+		System.out.println(shopService.findFoodOfShop());
+		
+		return mav;
 	}
 	
 

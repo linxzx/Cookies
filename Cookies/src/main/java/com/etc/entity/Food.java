@@ -50,7 +50,7 @@ public class Food {
 	}
 
 	public void setFoodname(String foodname) {
-		foodname = foodname;
+		this.foodname = foodname;
 	}
 
 	public double getFoodprice() {

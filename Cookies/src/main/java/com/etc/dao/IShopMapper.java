@@ -20,6 +20,9 @@ public interface IShopMapper {
 	//通过商家Name查询属于商家的食物
 	public Shop findFoodByShopName(Shop shop);
 	
+	//查询商家的食物
+	public List<Shop> findFoodOfShop();
+	
 	//添加商家
 	public int addShop(Shop shop);
 	

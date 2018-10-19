@@ -53,4 +53,10 @@ public class ShopServletImpl implements IShopService {
 		return shopMapper.updateShopById(shop);
 	}
 
+	@Override
+	public List<Shop> findFoodOfShop() {
+		// TODO Auto-generated method stub
+		return shopMapper.findFoodOfShop();
+	}
+
 }

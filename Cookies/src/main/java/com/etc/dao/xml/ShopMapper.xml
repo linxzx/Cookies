@@ -26,6 +26,7 @@
 		
 		<collection property="foodlist" ofType="com.etc.entity.Food">
 			<id property="foodid" column="foodid"/>
+			<result property="foodname" column="foodname"/>
 			<result property="foodprice" column="foodprice"/>
 			<result property="onsale" column="onsale"/>
 			<result property="fimgpath" column="fimgpath"/>
@@ -47,11 +48,11 @@
 		</collection>
 		
 		<collection property="orderlist" ofType="com.etc.entity.Order">
-		<id property="orderid" column="orderid"/>
-		<result property="ordertime" column="ordertime"/>
-		<result property="reachtime" column="reachtime"/>
-		<result property="bocost" column="bocost"/>
-		<result property="reachcost" column="reachcost"/>
+			<id property="orderid" column="orderid"/>
+			<result property="ordertime" column="ordertime"/>
+			<result property="reachtime" column="reachtime"/>
+			<result property="bocost" column="bocost"/>
+			<result property="reachcost" column="reachcost"/>
 		</collection>
 		
 		<collection property="shopredpacketlist" ofType="com.etc.entity.ShopRedPacket">
@@ -84,6 +85,7 @@
 		
 		<collection property="foodlist" ofType="com.etc.entity.Food">
 			<id property="foodid" column="foodid"/>
+			<id property="foodname" column="foodname"/>
 			<result property="foodprice" column="foodprice"/>
 			<result property="onsale" column="onsale"/>
 			<result property="fimgpath" column="fimgpath"/>
@@ -103,6 +105,11 @@
 	
 	<select id="findFoodByShopName" resultMap="shopResultMap">
 		select * from food f,shop s where shopname = #{shopname} and s.shopid = f.shopid
+	</select>
+	
+		
+	<select id="findFoodOfShop" resultMap="shopAllResultMap">
+		select * from food f,shop s where s.shopid = f.shopid
 	</select>
 	
 	<insert id="addUser" parameterType="com.etc.entity.Shop">
