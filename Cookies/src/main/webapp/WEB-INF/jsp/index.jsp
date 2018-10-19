@@ -14,6 +14,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		<link rel="stylesheet" href="<%=basePath %>style/css/bootstrap.min.css" />
 
 	</head>
+	
+	
 	<body>
 		<div class="body">
 			<div class="top">
@@ -47,12 +49,15 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		<div class="login">
 			<h2>登录</h2>
 			<form action="<%=basePath %>login/getAcandPw" method="get" >
-				<input type="text" Name="account" placeholder="用户名" >
-				<input type="password" Name="password" placeholder="密码" >
-	
+				<input id="loginaccount" type="text" Name="account" placeholder="用户名" >
+				<input id="loginpassword" type="password" Name="password" placeholder="密码" >
+				
 				<div class="send-button w3layouts agileits">
-				   <input id="loginbutton" type="submit" value="登录">
+				   <input id="loginbutton" type="submit" value="登录"  onclick="return loginClick();">
 				</div>
+				<script type="text/javascript">
+				
+				</script>
 			</form>
 			
 			<a href="web/index#">忘记密码？</a>
@@ -79,17 +84,21 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			<div id="" class="register">
 			<h2>注册</h2>
 			<form action="<%=basePath %>register/getPwData" method="get">
-				<input type="text" Name="account" placeholder="账号" required="">
-				<input type="password" Name="password" placeholder="密码" required="">
-				<input type="radio" Name="usersex" checked="checked" value="男" required=""><font color="white">男</font>
-				<input type="radio" Name="usersex" checked="checked" value="女" required=""><font color="white">女</font>
-				<input type="text" Name="userphonenum" placeholder="手机号码 " required="">
-				<input type="text" Name="username" placeholder="用户姓名" required="">
+
+				<input id="registeraccount" type="text" Name="account" placeholder="账号" required="">
+				<input id="registerpassword" type="password" Name="password" placeholder="密码" required="">
+				<input  type="radio" Name="usersex" checked="checked" value="男" required=""><font color="white">男</font>
+				<input  type="radio" Name="usersex" checked="checked" value="女" required=""><font color="white">女</font>
+				<input id="registeruserphonenum" type="text" Name="userphonenum" placeholder="手机号码 " required="">
+				<input id="registerusername" type="text" Name="username" placeholder="用户姓名" required="">
+
+
 		
 				<div class="send-button">
-					<input type="submit" value="注册">
+					<input type="submit" value="注册" onclick="return registerClick();">
 		   		 </div>
 				</form>
+				
 			
 		    </div>
 			</div>
@@ -97,9 +106,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		
 		
 </div>		
+
+
 		</body>
 </html>
-
-	<script type="text/javascript" src="<%=basePath %>style/js/jquery-1.8.3.min.js" ></script>
+<script type="text/javascript" src="<%=basePath %>style/js/jquery-1.8.3.min.js" ></script>
 	<script type="text/javascript" src="<%=basePath %>style/js/login.js" ></script>
 	<script type="text/javascript" src="<%=basePath %>style/js/public.js"></script>
+

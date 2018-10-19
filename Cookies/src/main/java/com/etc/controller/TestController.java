@@ -30,6 +30,7 @@ public class TestController {
 		
 		ModelAndView mav = new ModelAndView("MyJsp");
 
+
 		mav.addObject("test", userService.findAddressByUserName(user));
 		
 		System.out.println(userService.findAddressByUserName(user));

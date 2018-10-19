@@ -67,7 +67,7 @@
 			<version>4.11</version>
 			<scope>test</scope>
 		</dependency>
-		
+
 		<!-- mybatis和持久层需要的包 -->	
 		<!-- mybatis依赖的库 -->
 		<dependency>
