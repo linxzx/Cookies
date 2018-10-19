@@ -84,12 +84,21 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			<div id="" class="register">
 			<h2>注册</h2>
 			<form action="<%=basePath %>register/getPwData" method="get">
+<<<<<<< HEAD
 				<input id="registeraccount" type="text" Name="account" placeholder="账号" required="">
 				<input id="registerpassword" type="password" Name="password" placeholder="密码" required="">
 				<input  type="radio" Name="usersex" checked="checked" value="男" required=""><font color="white">男</font>
 				<input  type="radio" Name="usersex" checked="checked" value="女" required=""><font color="white">女</font>
 				<input id="registeruserphonenum" type="text" Name="userphonenum" placeholder="手机号码 " required="">
 				<input id="registerusername" type="text" Name="username" placeholder="用户姓名" required="">
+=======
+				<input type="text" Name="account" placeholder="账号" required="">
+				<input type="password" Name="password" placeholder="密码" required="">
+				<input type="radio" Name="usersex" checked="checked" value="男" required=""><font color="white">男</font>
+				<input type="radio" Name="usersex" checked="checked" value="女" required=""><font color="white">女</font>
+				<input type="text" Name="userphonenum" placeholder="手机号码 " required="">
+				<input type="text" Name="username" placeholder="用户姓名" required="">
+>>>>>>> refs/heads/dao
 		
 				<div class="send-button">
 					<input type="submit" value="注册" onclick="return registerClick();">
@@ -109,5 +118,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 </html>
 <script type="text/javascript" src="<%=basePath %>style/js/jquery-1.8.3.min.js" ></script>
 	<script type="text/javascript" src="<%=basePath %>style/js/login.js" ></script>
+<<<<<<< HEAD
 	<script type="text/javascript" src="<%=basePath %>style/js/public.js"></script>
 	
+=======
+	<script type="text/javascript" src="<%=basePath %>style/js/public.js"></script>
+>>>>>>> refs/heads/dao

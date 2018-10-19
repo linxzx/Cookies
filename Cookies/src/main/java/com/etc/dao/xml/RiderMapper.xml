@@ -15,6 +15,23 @@
 		
 	</resultMap>
 	
+	
+	<resultMap type="com.etc.entity.Rider" id="riderAllResultMap">
+		<id property="riderid" column="riderid "/>
+		<result property="ridername" column="ridername"/>
+		<result property="ridephonenum" column="ridephonenum"/>
+		<result property="ridesex" column="ridesex"/>
+		
+		<collection property="foodlist"  ofType="com.etc.entity.Food">
+			<id property="foodid" column="foodid"/>
+			<result property="foodprice" column="foodprice"/>
+			<result property="onsale" column="onsale"/>
+			<result property="fimgpath" column="fimgpath"/>
+			<result property="foodcontent" column="foodcontent"/>
+		</collection>
+		
+	</resultMap>
+	
 	<select id="findAllRider" resultMap="riderResultMap">
 		select * from rider
 	</select>

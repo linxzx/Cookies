@@ -5,7 +5,7 @@
   
   <mapper namespace="com.etc.dao.IUserMapper">
   
-  <resultMap type="com.etc.entity.User" id="userResultMap">
+  	<resultMap type="com.etc.entity.User" id="userResultMap">
 		<id property="userID" column="userID"/>
 		<result property="account" column="account"/>
 		<result property="password" column="password"/>
@@ -18,6 +18,53 @@
 		<result property="username" column="username"/>
 		<result property="viptime" column="viptime"/>
 	</resultMap>
+
+
+  	<resultMap type="com.etc.entity.User" id="userAllResultMap">
+		<id property="userID" column="userID"/>
+		<result property="account" column="account"/>
+		<result property="password" column="password"/>
+		<result property="alipayaccount" column="alipayaccount"/>
+		<result property="wechataccount" column="wechataccount"/>
+		<result property="userphonenum" column="userphonenum"/>
+		<result property="isvip" column="isvip"/>
+		<result property="money" column="money"/>
+		<result property="usersex" column="usersex"/>
+		<result property="username" column="username"/>
+		<result property="viptime" column="viptime"/>
+		
+		<collection property="addresslist" ofType="com.etc.entity.Address" >
+			<id property="addid" column="addid"/>
+			<result property="addname" column="addname"/>
+			<result property="addphonenum" column="addphonenum"/>
+			<result property="addsex" column="addsex"/>
+			<result property="address" column="address"/>
+			<result property="addnum" column="addnum"/>
+			<result property="isdefault" column="isdefault"/>
+		</collection>
+		
+		<collection property="userredpacketlist" ofType="com.etc.entity.UserRedPacket" >
+				<id property="uredid" column="uredid"/>
+		</collection>
+		
+		<collection property="shoppinglist" ofType="com.etc.entity.Shopping">
+			<result property="foodnum" column="foodnum"/>	
+		</collection>
+		
+		<collection property="orderlist" ofType="com.etc.entity.Order">
+			<id property="orderid" column="orderid"/>
+			<result property="ordertime" column="ordertime"/>
+			<result property="reachtime" column="reachtime"/>
+			<result property="bocost" column="bocost"/>
+			<result property="reachcost" column="reachcost"/>
+		</collection>
+		
+		<collection property="collectlist" ofType="com.etc.entity.Collect">
+
+		</collection>
+		
+	</resultMap>
+	
 	
 	
 	<resultMap type="com.etc.entity.User" id="userAndAddressResultMap">

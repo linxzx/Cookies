@@ -6,13 +6,13 @@ public class Comment {
 	private int comid;
 //	private int shopid;
 	private String comcontent;
-	private int userid;
+//	private int userid;
 	private Date comtime;
 	private int comstar;
 	private String comimgpath;
 	
 	private Shop shop;
-	
+	private User user;
 	
 	
 	public Shop getShop() {
@@ -22,6 +22,12 @@ public class Comment {
 		this.shop = shop;
 	}
 	
+	public User getUser() {
+		return user;
+	}
+	public void setUser(User user) {
+		this.user = user;
+	}
 	public Comment() {
 		// TODO Auto-generated constructor stub
 	}
@@ -38,12 +44,7 @@ public class Comment {
 	public void setComcontent(String comcontent) {
 		this.comcontent = comcontent;
 	}
-	public int getUserid() {
-		return userid;
-	}
-	public void setUserid(int userid) {
-		this.userid = userid;
-	}
+
 	public Date getComtime() {
 		return comtime;
 	}
@@ -62,12 +63,11 @@ public class Comment {
 	public void setComimgpath(String comimgpath) {
 		this.comimgpath = comimgpath;
 	}
-	public Comment(int comid, String comcontent, int userid, Date comtime,
+	public Comment(int comid, String comcontent, Date comtime,
 			int comstar, String comimgpath, Shop shop) {
 		super();
 		this.comid = comid;
 		this.comcontent = comcontent;
-		this.userid = userid;
 		this.comtime = comtime;
 		this.comstar = comstar;
 		this.comimgpath = comimgpath;
@@ -76,10 +76,11 @@ public class Comment {
 	@Override
 	public String toString() {
 		return "Comment [comid=" + comid + ", comcontent=" + comcontent
-				+ ", userid=" + userid + ", comtime=" + comtime + ", comstar="
-				+ comstar + ", comimgpath=" + comimgpath + ", shop=" + shop
-				+ "]";
+				+ ", comtime=" + comtime + ", comstar=" + comstar
+				+ ", comimgpath=" + comimgpath + ", shop=" + shop + ", user="
+				+ user + "]";
 	}
+
 
 	
 
