@@ -46,14 +46,6 @@
 
 		</collection>
 		
-		<collection property="foodlist" ofType="com.etc.entity.Food">
-			<id property="foodid" column="foodid"/>
-			<result property="foodprice" column="foodprice"/>
-			<result property="onsale" column="onsale"/>
-			<result property="fimgpath" column="fimgpath"/>
-			<result property="foodcontent" column="foodcontent"/>
-		</collection>
-		
 		<collection property="orderlist" ofType="com.etc.entity.Order">
 		<id property="orderid" column="orderid"/>
 		<result property="ordertime" column="ordertime"/>

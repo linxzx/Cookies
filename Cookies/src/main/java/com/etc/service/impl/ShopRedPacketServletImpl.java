@@ -11,8 +11,8 @@ import com.etc.service.IShopRedPacketService;
 public class ShopRedPacketServletImpl implements IShopRedPacketService {
 	
 	@Autowired
-	@Qualifier("ShopRedPacketMapper")
-	private IShopRedPacketMapper ShopRedPacketMapper;
+	@Qualifier("shopRedPacketMapper")
+	private IShopRedPacketMapper shopRedPacketMapper;
 	
 
 

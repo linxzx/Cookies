@@ -28,7 +28,7 @@ public class TestController {
 		User user = new User();
 		user.setUsername("lin");
 		
-		ModelAndView mav = new ModelAndView("test");
+		ModelAndView mav = new ModelAndView("MyJsp");
 
 		mav.addObject("test", userService.findAddressByUserName(user));
 		

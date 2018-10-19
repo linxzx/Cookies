@@ -3,9 +3,9 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
   
-  <mapper namespace="com.etc.dao.IUserRedPacketMapper">	
+  <mapper namespace="com.etc.dao.IShopRedPacketMapper">	
 		
-	<resultMap type="com.etc.entity.UserRedPacket" id="userRedPacketResultMap">
+	<resultMap type="com.etc.entity.ShopRedPacket" id="shopRedPacketResultMap">
 		<id property="sredid" column="sredid"/>
 		<result property="sredname" column="sredname"/>
 		<result property="discount" column="discount"/>

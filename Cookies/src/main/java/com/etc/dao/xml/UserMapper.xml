@@ -43,10 +43,6 @@
 			<result property="isdefault" column="isdefault"/>
 		</collection>
 		
-		<collection property="shoppinglist" ofType="com.etc.entity.Shopping" >
-			<result property="foodnum" column="foodnum"/>	
-		</collection>
-		
 		<collection property="userredpacketlist" ofType="com.etc.entity.UserRedPacket" >
 				<id property="uredid" column="uredid"/>
 		</collection>

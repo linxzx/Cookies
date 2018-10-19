@@ -11,7 +11,7 @@ import com.etc.service.IUserRedPacketService;
 public class UserRedPacketServletImpl implements IUserRedPacketService {
 	
 	@Autowired
-	@Qualifier("UserRedPacketMapper")
+	@Qualifier("userRedPacketMapper")
 	private IUserRedPacketMapper userRedPacketMapper;
 	
 
