@@ -8,7 +8,7 @@ import com.etc.entity.Address;
 import com.etc.entity.User;
 
 @Repository("shopRedPacketMapper")
-public interface IUserRedPackerMapper {
+public interface IShopRedPacketMapper {
 	
 	
 	
