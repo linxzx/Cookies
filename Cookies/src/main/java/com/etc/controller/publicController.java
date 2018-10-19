@@ -12,13 +12,15 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 @RequestMapping(value="public")
-@ResponseBody
+
 public class publicController {
 	
 	//设置从前端传回来的URL
 	@RequestMapping(value="getURL",method = RequestMethod.POST)
+	@ResponseBody
 	public void getURL(HttpSession session,HttpServletRequest request)  {
 		String returnURL ="redirect:/"+ request.getParameter("returnURL");
+
 		System.out.println(returnURL);
 		session.setAttribute("returnURL", returnURL);
 	}

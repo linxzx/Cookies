@@ -19,5 +19,10 @@ public class webController {
 		return "test";
 	}
 	
+	@RequestMapping(value ="adminlogin")
+	public 	String adminlogin(){
+		
+		return "adminlogin";
+	}
 	
 }
