@@ -14,8 +14,10 @@ public class CommonInterceptor implements  HandlerInterceptor{
 	 response.setCharacterEncoding("utf-8");
 	 System.out.println("_____________________________________________");
 	 boolean adminLogin =false;
-	 if(request.getSession().getAttribute("adminLogin")!=null)
+	 if(request.getSession().getAttribute("adminLogin")!=null){
 		 adminLogin =  (boolean) request.getSession().getAttribute("adminLogin");
+		 System.out.println(adminLogin);
+	 }
 
       if(adminLogin ){   
     	    return true;
